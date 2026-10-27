@@ -289,32 +289,34 @@
   </main>
 
   <!-- Bottom Navigation Bar -->
-  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-4 py-2">
-    <div class="max-w-md mx-auto flex items-center justify-around text-[10px] font-bold text-stone-500">
+  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-6 py-2">
+    <div class="max-w-md mx-auto flex items-center justify-between text-[11px] font-bold text-stone-500">
       <a href="index.html" class="flex flex-col items-center gap-1 text-[#B45309]">
         <svg class="w-5 h-5 text-[#B45309]" fill="currentColor" viewBox="0 0 20 20">
           <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
         </svg>
         <span>首頁</span>
       </a>
-      <a href="day1.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
-        <span class="text-sm leading-none">🇧🇪</span>
-        <span>Day 1</span>
+
+      <!-- 行程 -->
+      <a href="day1.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
+        <svg class="w-5 h-5 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span>行程</span>
       </a>
-      <a href="day2.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
-        <span class="text-sm leading-none">🌉</span>
-        <span>Day 2</span>
-      </a>
-      <a href="day3.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
-        <span class="text-sm leading-none">🚄</span>
-        <span>Day 3</span>
-      </a>
+
       <a href="ledger.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
-        <span class="text-sm leading-none">💰</span>
+        <svg class="w-5 h-5 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
         <span>帳本</span>
       </a>
-      <a href="transport_guide.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
-        <span class="text-sm leading-none">🚆</span>
+
+      <a href="transport_guide.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
+        <svg class="w-5 h-5 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
         <span>交通</span>
       </a>
     </div>

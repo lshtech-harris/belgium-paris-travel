@@ -17,6 +17,65 @@ function initApp() {
   loadStoredData();
   updateTopLedgerBadges();
   setupNavigationActiveState();
+  initWeatherWidget();
+}
+
+// Live Weather Forecast for Day Pages (Open-Meteo API)
+function initWeatherWidget() {
+  const widget = document.getElementById('weather-widget');
+  if (!widget) return;
+
+  const lat = widget.getAttribute('data-lat') || '50.85';
+  const lon = widget.getAttribute('data-lon') || '4.35';
+  const tz = widget.getAttribute('data-timezone') || 'Europe/Brussels';
+  const cityName = widget.getAttribute('data-city') || '布魯塞爾 Brussels';
+
+  const tempEl = document.getElementById('weather-temp');
+  const descEl = document.getElementById('weather-desc');
+  const iconEl = document.getElementById('weather-icon');
+  const rangeEl = document.getElementById('weather-range');
+  const cityEl = document.getElementById('weather-city');
+
+  if (cityEl) cityEl.textContent = cityName;
+
+  function getWeatherInfo(code) {
+    if (code === 0) return { text: '晴朗無雲', icon: '☀️' };
+    if ([1, 2, 3].includes(code)) return { text: '多雲時晴', icon: '🌤️' };
+    if ([45, 48].includes(code)) return { text: '秋霧繚繞', icon: '🌫️' };
+    if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) return { text: '短暫陣雨', icon: '🌧️' };
+    if ([71, 73, 75, 77, 85, 86].includes(code)) return { text: '局部初雪/雨夾雪', icon: '🌨️' };
+    if ([95, 96, 99].includes(code)) return { text: '雷陣雨', icon: '⛈️' };
+    return { text: '陰天多雲', icon: '☁️' };
+  }
+
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=${encodeURIComponent(tz)}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.current_weather) {
+        const current = data.current_weather;
+        const info = getWeatherInfo(current.weathercode);
+        const maxTemp = Math.round(data.daily.temperature_2m_max[0]);
+        const minTemp = Math.round(data.daily.temperature_2m_min[0]);
+        const rainProb = (data.daily.precipitation_probability_max && data.daily.precipitation_probability_max[0] !== undefined)
+          ? data.daily.precipitation_probability_max[0]
+          : 0;
+
+        if (tempEl) tempEl.textContent = `${Math.round(current.temperature)}°C`;
+        if (descEl) descEl.textContent = `${info.text} • 降雨率 ${rainProb}%`;
+        if (iconEl) iconEl.textContent = info.icon;
+        if (rangeEl) rangeEl.textContent = `高 ${maxTemp}° / 低 ${minTemp}°`;
+      }
+    })
+    .catch(err => {
+      console.log('Open-Meteo weather fallback');
+      const fallbackTemp = widget.getAttribute('data-fallback-temp') || '12°C';
+      const fallbackDesc = widget.getAttribute('data-fallback-desc') || '多雲微涼 (深秋歐陸)';
+      const fallbackRange = widget.getAttribute('data-fallback-range') || '高 15° / 低 7°';
+      if (tempEl) tempEl.textContent = fallbackTemp;
+      if (descEl) descEl.textContent = fallbackDesc;
+      if (iconEl) iconEl.textContent = '🌤️';
+      if (rangeEl) rangeEl.textContent = fallbackRange;
+    });
 }
 
 // Load Data from LocalStorage
