@@ -178,7 +178,13 @@
             <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">08:30</span>
             <span class="text-[11px] bg-blue-50 text-blue-600 font-bold px-1.5 py-0.5 rounded">🚆 SNCB 國鐵</span>
           </div>
-          <h4 class="text-sm font-black text-[#1E293B]">布魯塞爾出發 ➔ 前往根特 Ghent</h4>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">布魯塞爾出發 ➔ 前往根特 Ghent</h4>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gent-Sint-Pieters+Station" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2 py-0.5 rounded-lg">
+              <svg class="w-3 h-3 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>根特車站 ➔</span>
+            </a>
+          </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             Bruxelles-Central 搭乘 IC 列車前往 Gent-Sint-Pieters（約 35 分鐘），出站後搭乘 1 號路面電車直達舊城區 Korenmarkt。
           </p>
@@ -192,7 +198,10 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">聖巴夫主教座堂 (Saint Bavo's Cathedral)</h4>
-            <a href="https://maps.google.com/?q=Saint+Bavo's+Cathedral+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Saint+Bavo's+Cathedral+Ghent" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             羅馬式與哥德式融合大教堂，收藏北方文藝復興凡艾克兄弟的曠世巨作《神秘羔羊之崇拜（根特祭壇畫）》。
@@ -208,26 +217,41 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">根特鐘樓 ＋ 三塔天際線</h4>
-            <a href="https://maps.google.com/?q=Belfry+of+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Belfry+of+Ghent" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             91 公尺高的中世紀鐘樓，頂端裝飾象徵自由的金色飛龍。與聖巴夫大教堂、聖尼閣教堂連成一線，構成根特最富盛名的「中世紀三塔」。
           </p>
         </div>
 
-        <!-- 11:00 St Michael & Graslei -->
-        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">11:00</span>
-            <span class="text-[11px] bg-amber-50 text-amber-800 font-bold px-1.5 py-0.5 rounded">⭐️ 根特最美視角</span>
+        <!-- 11:00 聖米歇爾橋 ＆ 香草河岸 (Featured Landmark Card with Image) -->
+        <div class="bg-white rounded-2xl border border-[#E2E8F0] shadow-soft overflow-hidden space-y-0">
+          <div class="relative h-44 w-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?q=80&w=1000&auto=format&fit=crop" alt="根特香草河岸" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="text-[10px] font-black uppercase tracking-wider bg-[#B45309] text-white px-2 py-0.5 rounded-md shadow">⭐️ 根特明信片第一視角</span>
+            </div>
+            <div class="absolute bottom-2.5 left-3 right-3 text-white">
+              <h4 class="text-base font-black font-serif-title leading-tight">聖米歇爾橋 ＆ 香草河岸</h4>
+              <p class="text-[10px] text-stone-200">Sint-Michielsbrug & Graslei</p>
+            </div>
           </div>
-          <div class="flex items-center justify-between">
-            <h4 class="text-sm font-black text-[#1E293B]">聖米歇爾橋 ＋ 香草河岸 (Graslei)</h4>
-            <a href="https://maps.google.com/?q=Saint+Michael's+Bridge+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          <div class="p-3.5 space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">11:00 - 11:45</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=St+Michael's+Bridge+Ghent" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+                <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>Google Maps 導航 ➔</span>
+              </a>
+            </div>
+            <p class="text-stone-600 leading-relaxed">
+              站在聖米歇爾石拱橋上，是一生必看一次的經典全景：回頭能把聖尼各老堂、根特鐘樓、聖巴夫大教堂三座高聳尖塔一字排開收入鏡頭；往下看是香草河岸 (Graslei) 與穀物河岸 (Korenlei) 兩側中世紀行會建築倒映在利斯河上的金色波光！
+            </p>
           </div>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            站在聖米歇爾橋上，可以一次將三塔天際線與萊厄河盡收眼底，是全根特第一名的拍照打卡點！走下橋漫步於香草河岸與穀物河岸，欣賞建於 12–17 世紀的華麗行會山形牆建築倒影。
-          </p>
         </div>
 
         <!-- 11:45 Gravensteen -->
@@ -238,7 +262,10 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">格拉文斯丁伯爵城堡 (Gravensteen)</h4>
-            <a href="https://maps.google.com/?q=Gravensteen+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gravensteen+Ghent" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             市中心被護城河環繞的中世紀石造城堡，外觀非常壯觀好拍！建議在橋上拍攝外觀留影即可，把寶貴的參觀時間留給下午的布魯日。
@@ -253,7 +280,10 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">午餐：傳統奶油燉雞 ＆ 買 Cuberdons 鼻子糖</h4>
-            <a href="https://maps.google.com/?q=Groentenmarkt+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Groentenmarkt+Ghent" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>蔬菜市場地圖 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             在 Patershol 古老石板巷弄品嚐根特名菜 <strong>Waterzooi（法蘭德斯傳統奶油燉雞/魚湯）</strong>。飯後在蔬菜市場 (Groentenmarkt) 路邊推車買一份外脆內流心的紫錐鼻子糖 (Cuberdon)！
@@ -266,7 +296,13 @@
             <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">13:15</span>
             <span class="text-[11px] bg-blue-50 text-blue-600 font-bold px-1.5 py-0.5 rounded">🚆 轉場布魯日</span>
           </div>
-          <h4 class="text-sm font-black text-[#1E293B]">搭火車前往布魯日 Bruges</h4>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">搭火車前往布魯日 Bruges</h4>
+            <a href="https://www.google.com/maps/search/?api=1&query=Station+Brugge" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2 py-0.5 rounded-lg">
+              <svg class="w-3 h-3 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>布魯日車站 ➔</span>
+            </a>
+          </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             搭電車回 Gent-Sint-Pieters，搭乘 IC 列車前往 Brugge（車程僅約 25 分鐘）。
           </p>
@@ -280,26 +316,41 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">愛之湖 (Minnewater) ＆ 天鵝湖公園</h4>
-            <a href="https://maps.google.com/?q=Minnewaterpark+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Minnewaterpark+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             從火車站步行進入舊城的必經之處。古老的紅磚防禦塔、垂柳與河面成群悠游的白天鵝，完美揭開童話小鎮序幕。
           </p>
         </div>
 
-        <!-- 14:45 Canal Cruise -->
-        <div class="bg-gradient-to-br from-white to-[#EFF6FF] rounded-2xl p-4 border border-[#BFDBFE] shadow-soft space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-black text-[#1E40AF] bg-[#DBEAFE] px-2 py-0.5 rounded-md">14:45</span>
-            <span class="text-[11px] bg-[#EFF6FF] text-[#1E40AF] font-bold px-1.5 py-0.5 rounded">⭐️ 核心任務</span>
+        <!-- 14:45 布魯日運河遊船 (Featured Landmark Card with Image) -->
+        <div class="bg-white rounded-2xl border border-[#BFDBFE] shadow-soft overflow-hidden space-y-0">
+          <div class="relative h-44 w-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1000&auto=format&fit=crop" alt="布魯日運河遊船" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="text-[10px] font-black uppercase tracking-wider bg-[#1E40AF] text-white px-2 py-0.5 rounded-md shadow">🚢 北方威尼斯必搭水上體驗</span>
+            </div>
+            <div class="absolute bottom-2.5 left-3 right-3 text-white">
+              <h4 class="text-base font-black font-serif-title leading-tight">布魯日經典運河遊船 (Canal Cruise)</h4>
+              <p class="text-[10px] text-stone-200">Bootexcursies Brugge</p>
+            </div>
           </div>
-          <div class="flex items-center justify-between">
-            <h4 class="text-sm font-black text-[#1E293B]">布魯日運河遊船 (Canal Cruise)</h4>
-            <a href="https://maps.google.com/?q=Rozenhoedkaai+Bruges" target="_blank" class="text-[11px] text-[#1E40AF] font-bold hover:underline">導航 ➔</a>
+          <div class="p-3.5 space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-[#1E40AF] bg-[#DBEAFE] px-2 py-0.5 rounded-md">14:45 - 15:30</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Bootexcursies+Gruuthuse+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#1E40AF] font-bold hover:underline bg-[#EFF6FF] border border-[#BFDBFE] px-2.5 py-1 rounded-lg">
+                <svg class="w-3.5 h-3.5 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>遊船碼頭導航 ➔</span>
+              </a>
+            </div>
+            <p class="text-stone-600 leading-relaxed">
+              抵達布魯日<strong>第一優先排隊搭船</strong>！搭乘露天小木船由船長掌舵，在寧靜水面穿過一座座古老石拱橋，仰望沿岸百年紅磚老宅與垂落水面的爬藤。航程約 35 分鐘，票價約 €12–15/人，是北方威尼斯最不可錯過的精華！
+            </p>
           </div>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            抵達布魯日<strong>第一優先排隊搭船</strong>！搭乘露天小船在水面穿過一座座古石拱橋，仰望沿岸百年紅磚老宅與垂落水面的爬藤。航程約 35 分鐘，票價約 €12–15/人，是北方威尼斯最不可錯過的精華！
-          </p>
         </div>
 
         <!-- 15:45 Burg & Holy Blood -->
@@ -310,7 +361,10 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">城堡廣場 (Burg) ＆ 聖血教堂</h4>
-            <a href="https://maps.google.com/?q=Basilica+of+the+Holy+Blood+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Basilica+of+the+Holy+Blood+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             走下船後步行 3 分鐘抵達城堡廣場，欣賞華麗鍍金的哥德式市政廳。一旁的聖血聖殿收藏了 12 世紀十字軍東征帶回的水晶聖血瓶。
@@ -325,26 +379,41 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">市集廣場 (Markt) ＆ 布魯日鐘樓</h4>
-            <a href="https://maps.google.com/?q=Markt+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Belfry+of+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             布魯日的心臟！廣場被七彩山形屋餐廳與新哥德式省議會大廈環繞，中央矗立著 83 公尺高聳的布魯日鐘樓（電影《殺手沒有假期 In Bruges》主景）。
           </p>
         </div>
 
-        <!-- 17:00 Rozenhoedkaai Blue Hour -->
-        <div class="bg-gradient-to-br from-white to-[#FEF3C7] rounded-2xl p-4 border border-[#FDE68A] shadow-soft space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">17:00 - 17:30</span>
-            <span class="text-[11px] bg-[#FEF3C7] text-[#92400E] font-bold px-1.5 py-0.5 rounded">📸 絕美藍調日落</span>
+        <!-- 17:00 玫瑰碼頭 (Featured Landmark Card with Image) -->
+        <div class="bg-white rounded-2xl border border-[#FDE68A] shadow-soft overflow-hidden space-y-0">
+          <div class="relative h-44 w-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517736996303-4eec4a66bb17?q=80&w=1000&auto=format&fit=crop" alt="布魯日玫瑰碼頭" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="text-[10px] font-black uppercase tracking-wider bg-[#B45309] text-white px-2 py-0.5 rounded-md shadow">📸 全球最美水都明信片轉角</span>
+            </div>
+            <div class="absolute bottom-2.5 left-3 right-3 text-white">
+              <h4 class="text-base font-black font-serif-title leading-tight">玫瑰碼頭 (Rozenhoedkaai) 藍調夕陽</h4>
+              <p class="text-[10px] text-stone-200">The Most Photographed Spot in Bruges</p>
+            </div>
           </div>
-          <div class="flex items-center justify-between">
-            <h4 class="text-sm font-black text-[#1E293B]">玫瑰碼頭 (Rozenhoedkaai) 藍調夜景 ⭐️</h4>
-            <a href="https://maps.google.com/?q=Rozenhoedkaai+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          <div class="p-3.5 space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">17:00 - 17:30</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Rozenhoedkaai+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+                <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>Google Maps 導航 ➔</span>
+              </a>
+            </div>
+            <p class="text-stone-600 leading-relaxed">
+              11 月約 17:15 日落，此時天空轉為深邃魔幻藍調 (Blue Hour)，兩岸復古街燈初上，運河水面倒映著中世紀鐘樓與紅磚建築，是整座布魯日最令人屏息的明信片絕景！
+            </p>
           </div>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            11 月約 17:15 日落，此時天空轉為深邃魔幻藍調 (Blue Hour)，兩岸復古街燈初上，運河水面倒映著中世紀鐘樓與紅磚建築，是整座布魯日最令人屏息的明信片絕景！
-          </p>
         </div>
 
         <!-- 17:30 The Waffle Duke -->
@@ -355,7 +424,10 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">The Waffle Duke 鬆餅</h4>
-            <a href="https://maps.google.com/?q=The+Waffle+Duke+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=The+Waffle+Duke+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Google Maps 導航 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             吃朋友大力推薦的人氣鬆餅！熱騰騰的現烤脆皮鬆餅淋上香濃比利時黑巧克力醬與焦糖 Lotus 餅乾碎，在冷冷的 11 月傍晚吃一口無比幸福。
@@ -370,7 +442,10 @@
           </div>
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-[#1E293B]">布魯日老城晚餐 ＆ Brugse Zot 啤酒</h4>
-            <a href="https://maps.google.com/?q=Brouwerij+De+Halve+Maan" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Brouwerij+De+Halve+Maan+Bruges" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2.5 py-1 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>半月酒廠地圖 ➔</span>
+            </a>
           </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             在溫馨的石造餐館享用熱騰騰的法蘭德斯啤酒燉牛肉 (Carbonnade Flamande) 配金黃脆薯。品嚐布魯日最具代表性的 <strong>Brugse Zot（布魯日小丑啤酒）</strong> 或重口味的 Straffe Hendrik 修道院黑啤酒。
@@ -383,7 +458,13 @@
             <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">20:00</span>
             <span class="text-[11px] text-stone-400 font-medium">返回布魯塞爾</span>
           </div>
-          <h4 class="text-sm font-black text-[#1E293B]">搭火車返回布魯塞爾 (Brussels)</h4>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">搭火車返回布魯塞爾 (Brussels)</h4>
+            <a href="https://www.google.com/maps/search/?api=1&query=Bruxelles-Central" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-[#B45309] font-bold hover:underline bg-[#FAF8F5] border border-stone-200 px-2 py-0.5 rounded-lg">
+              <svg class="w-3 h-3 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>布魯塞爾中央站 ➔</span>
+            </a>
+          </div>
           <p class="text-xs text-stone-600 leading-relaxed">
             漫步回 Brugge 火車站，搭乘 IC 列車直達 Bruxelles-Central（車程約 60 分鐘），回飯店休息，整理打包明日前往巴黎的大行李。
           </p>
