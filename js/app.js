@@ -29,45 +29,97 @@ function initWeatherWidget() {
   const lon = widget.getAttribute('data-lon') || '4.35';
   const tz = widget.getAttribute('data-timezone') || 'Europe/Brussels';
   const cityName = widget.getAttribute('data-city') || '布魯塞爾 Brussels';
+  const targetDate = widget.getAttribute('data-date'); // e.g. '2026-10-31'
 
   const tempEl = document.getElementById('weather-temp');
   const descEl = document.getElementById('weather-desc');
   const iconEl = document.getElementById('weather-icon');
   const rangeEl = document.getElementById('weather-range');
   const cityEl = document.getElementById('weather-city');
+  const badgeEl = document.getElementById('weather-badge');
 
   if (cityEl) cityEl.textContent = cityName;
 
-  function getWeatherInfo(code) {
-    if (code === 0) return { text: '晴朗無雲', icon: '☀️' };
-    if ([1, 2, 3].includes(code)) return { text: '多雲時晴', icon: '🌤️' };
-    if ([45, 48].includes(code)) return { text: '秋霧繚繞', icon: '🌫️' };
-    if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) return { text: '短暫陣雨', icon: '🌧️' };
-    if ([71, 73, 75, 77, 85, 86].includes(code)) return { text: '局部初雪/雨夾雪', icon: '🌨️' };
+  function getWeatherInfo(code, rainProb) {
+    // 嚴格氣象代碼判定，杜絕「晴朗無雲 ＋ 降雨率 100%」矛盾
     if ([95, 96, 99].includes(code)) return { text: '雷陣雨', icon: '⛈️' };
-    return { text: '陰天多雲', icon: '☁️' };
+    if ([71, 73, 75, 77, 85, 86].includes(code)) return { text: '降雪/雨夾雪', icon: '🌨️' };
+    if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) {
+      if (rainProb >= 70) return { text: '局部陣雨 (備傘)', icon: '🌧️' };
+      return { text: '偶有短暫雨', icon: '🌦️' };
+    }
+    if ([45, 48].includes(code)) return { text: '晨霧繚繞', icon: '🌫️' };
+
+    // 多雲或陰天
+    if (code === 3) {
+      if (rainProb >= 50) return { text: '陰有短暫陣雨', icon: '🌧️' };
+      return { text: '陰天多雲', icon: '☁️' };
+    }
+    if ([1, 2].includes(code)) {
+      if (rainProb >= 50) return { text: '多雲偶陣雨', icon: '🌦️' };
+      return { text: '多雲時晴', icon: '🌤️' };
+    }
+
+    // code === 0 (晴朗)
+    if (code === 0) {
+      if (rainProb >= 50) return { text: '晴時多雲偶雨', icon: '🌦️' };
+      if (rainProb >= 30) return { text: '晴時多雲', icon: '🌤️' };
+      return { text: '秋日晴朗', icon: '☀️' };
+    }
+
+    if (rainProb >= 50) return { text: '短暫陣雨', icon: '🌧️' };
+    return { text: '多雲微涼', icon: '⛅' };
   }
 
-  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=${encodeURIComponent(tz)}`)
+  // 取得 14 天預報，以取得出遊當天 (10/31 ~ 11/06) 的精確每日預報
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&current_weather=true&timezone=${encodeURIComponent(tz)}&forecast_days=14`)
     .then(res => res.json())
     .then(data => {
-      if (data && data.current_weather) {
-        const current = data.current_weather;
-        const info = getWeatherInfo(current.weathercode);
-        const maxTemp = Math.round(data.daily.temperature_2m_max[0]);
-        const minTemp = Math.round(data.daily.temperature_2m_min[0]);
-        const rainProb = (data.daily.precipitation_probability_max && data.daily.precipitation_probability_max[0] !== undefined)
-          ? data.daily.precipitation_probability_max[0]
+      if (data && data.daily && data.daily.time) {
+        let idx = -1;
+        if (targetDate) {
+          idx = data.daily.time.indexOf(targetDate);
+        }
+        // 如果找不到指定日期，預設顯示今天 (index 0)
+        if (idx === -1) idx = 0;
+
+        const maxTemp = Math.round(data.daily.temperature_2m_max[idx]);
+        const minTemp = Math.round(data.daily.temperature_2m_min[idx]);
+        const rainProb = (data.daily.precipitation_probability_max && data.daily.precipitation_probability_max[idx] !== undefined)
+          ? data.daily.precipitation_probability_max[idx]
           : 0;
 
-        if (tempEl) tempEl.textContent = `${Math.round(current.temperature)}°C`;
+        // 核心邏輯：使用該日期整天的每日天氣主代碼 (daily.weathercode)，避免抓到夜間晴空卻配上全日降雨率的矛盾
+        const code = (data.daily.weathercode && data.daily.weathercode[idx] !== undefined)
+          ? data.daily.weathercode[idx]
+          : (data.current_weather ? data.current_weather.weathercode : 0);
+
+        const info = getWeatherInfo(code, rainProb);
+
+        // 判斷是否為今天
+        const isToday = (idx === 0);
+        if (badgeEl) {
+          if (targetDate) {
+            const dateParts = targetDate.split('-');
+            badgeEl.textContent = `${dateParts[1]}/${dateParts[2]} 當日預報`;
+          } else {
+            badgeEl.textContent = isToday ? '今日預報' : '天氣預報';
+          }
+        }
+
+        if (isToday && data.current_weather && !isNaN(data.current_weather.temperature)) {
+          if (tempEl) tempEl.textContent = `${Math.round(data.current_weather.temperature)}°C`;
+        } else {
+          if (tempEl) tempEl.textContent = `${maxTemp}°C`;
+        }
+
         if (descEl) descEl.textContent = `${info.text} • 降雨率 ${rainProb}%`;
         if (iconEl) iconEl.textContent = info.icon;
         if (rangeEl) rangeEl.textContent = `高 ${maxTemp}° / 低 ${minTemp}°`;
       }
     })
     .catch(err => {
-      console.log('Open-Meteo weather fallback');
+      console.log('Open-Meteo weather fallback', err);
       const fallbackTemp = widget.getAttribute('data-fallback-temp') || '12°C';
       const fallbackDesc = widget.getAttribute('data-fallback-desc') || '多雲微涼 (深秋歐陸)';
       const fallbackRange = widget.getAttribute('data-fallback-range') || '高 15° / 低 7°';
