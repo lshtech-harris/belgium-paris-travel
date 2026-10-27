@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>💰 3 人旅遊即時分帳帳本 | 比利時・巴黎 Travel Companion</title>
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Trip Data & Core Scripts -->
+  <script src="./tripData.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1E293B] antialiased selection:bg-[#FEF3C7] selection:text-[#92400E] min-h-screen flex flex-col pb-24">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 glass-header px-4 py-3 shadow-sm">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <a href="index.html" class="p-2 -ml-2 rounded-full hover:bg-stone-200/50 text-[#1E293B] transition-colors" aria-label="返回首頁">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </a>
+        <div>
+          <h1 class="text-base font-black text-[#1E293B] leading-tight font-serif-title">3 人分帳帳本</h1>
+          <p class="text-[11px] text-stone-500 font-medium">歐元 ⇄ 台幣即時換算・智慧平帳</p>
+        </div>
+      </div>
+
+      <button onclick="openDailyExpenseModal('day1')" class="bg-[#B45309] hover:bg-[#92400E] text-white font-bold px-3 py-1.5 text-xs rounded-xl shadow-soft flex items-center gap-1 transition-all">
+        <span>＋ 記一筆</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-6 w-full">
+
+    <!-- Traveler & Rate Settings Card (Accordion/Collapsible) -->
+    <section class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-stone-100 flex items-center justify-center text-xs">👥</span>
+          <h3 class="text-xs font-black text-[#1E293B]">分帳設定 (3 人名單與匯率)</h3>
+        </div>
+        <button onclick="toggleSettingsPanel()" id="settingsToggleBtn" class="text-xs font-bold text-[#B45309] hover:underline">
+          展開設定 ▾
+        </button>
+      </div>
+
+      <div id="settingsPanel" class="hidden pt-2 border-t border-stone-100 space-y-3 text-xs">
+        <div class="grid grid-cols-3 gap-2">
+          <div>
+            <label class="text-[10px] font-bold text-stone-500 block mb-1">旅行者 1</label>
+            <input type="text" id="travelerName0" value="我" onchange="updateTravelerNames()" class="w-full px-2.5 py-1.5 rounded-lg border border-stone-200 text-xs font-bold" />
+          </div>
+          <div>
+            <label class="text-[10px] font-bold text-stone-500 block mb-1">旅行者 2</label>
+            <input type="text" id="travelerName1" value="朋友 A" onchange="updateTravelerNames()" class="w-full px-2.5 py-1.5 rounded-lg border border-stone-200 text-xs font-bold" />
+          </div>
+          <div>
+            <label class="text-[10px] font-bold text-stone-500 block mb-1">旅行者 3</label>
+            <input type="text" id="travelerName2" value="朋友 B" onchange="updateTravelerNames()" class="w-full px-2.5 py-1.5 rounded-lg border border-stone-200 text-xs font-bold" />
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between bg-stone-50 p-2.5 rounded-xl border border-stone-200/60">
+          <div>
+            <span class="text-[10px] font-bold text-stone-500 block">歐元換算匯率 (EUR to TWD)</span>
+            <span class="text-xs font-medium text-stone-400">目前設定：1 EUR ≈ <span id="currentRateText">35.0</span> TWD</span>
+          </div>
+          <div class="flex items-center gap-1 w-24">
+            <span class="text-xs text-stone-500 font-bold">NT$</span>
+            <input type="number" step="0.1" id="exchangeRateInput" value="35.0" onchange="updateRateSetting()" class="w-full px-2 py-1 rounded-lg border border-stone-300 text-xs font-black text-[#B45309] bg-white text-right" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Total Summary Overview Card -->
+    <section class="bg-gradient-to-br from-[#1E293B] to-[#0F172A] rounded-3xl p-5 text-white shadow-float space-y-4 relative overflow-hidden">
+      <div class="flex items-center justify-between relative z-10">
+        <span class="text-[10px] font-extrabold tracking-widest text-[#FEF3C7] uppercase bg-white/10 px-2.5 py-1 rounded-full border border-white/10">
+          TOTAL EXPENSES
+        </span>
+        <span id="txCountBadge" class="text-xs text-stone-300 font-medium">0 筆消費</span>
+      </div>
+
+      <div class="relative z-10 space-y-1">
+        <span class="text-xs text-stone-400 block font-medium">全體總支出 (3 人累計)</span>
+        <div class="flex items-baseline gap-2">
+          <h2 id="totalExpenseEUR" class="text-3xl font-black font-serif-title tracking-tight text-white">€0.00</h2>
+          <span id="totalExpenseTWD" class="text-xs text-stone-300 font-semibold">(≈ NT$ 0)</span>
+        </div>
+      </div>
+
+      <div class="relative z-10 pt-3 border-t border-white/10 grid grid-cols-2 gap-2 text-xs">
+        <div>
+          <span class="text-[10px] text-stone-400 block">每人人均消費</span>
+          <p id="avgExpenseEUR" class="text-base font-black text-[#FEF3C7]">€0.00</p>
+          <span id="avgExpenseTWD" class="text-[10px] text-stone-400 font-normal">≈ NT$ 0 / 人</span>
+        </div>
+        <div class="text-right">
+          <span class="text-[10px] text-stone-400 block">目前幣別設定</span>
+          <p class="text-sm font-black text-stone-200">EUR (€) 優先</p>
+          <span class="text-[10px] text-stone-400">離線自動保存</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settlement Reconciliation Module (平帳試算) -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-3.5">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center text-sm font-black">⚖️</span>
+          <div>
+            <h3 class="text-sm font-black text-[#1E293B]">智慧平帳結算 (Who owes Who)</h3>
+            <p class="text-[10px] text-stone-500 font-medium">自動沖銷彼此差額・最簡轉帳路徑</p>
+          </div>
+        </div>
+        <button onclick="copySettlementSummary()" class="text-xs font-bold bg-stone-100 hover:bg-stone-200 text-stone-700 px-2.5 py-1 rounded-xl transition-all flex items-center gap-1">
+          <span>📋 複製結算</span>
+        </button>
+      </div>
+
+      <!-- Settlement Result Container -->
+      <div id="settlementPlanContainer" class="space-y-2">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Spending by Category (Chart.js) -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-black text-[#1E293B] flex items-center gap-1.5">
+          <span>📊</span> <span>消費類別比例</span>
+        </h3>
+        <span class="text-[10px] text-stone-400 font-medium">即時圖表</span>
+      </div>
+
+      <div class="h-44 flex items-center justify-center relative">
+        <canvas id="categoryChart"></canvas>
+      </div>
+
+      <div id="categoryBreakdownList" class="grid grid-cols-2 gap-2 text-xs pt-2 border-t border-stone-100">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Filter by Day & Search -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-black text-[#1E293B] flex items-center gap-1.5">
+          <span>📝</span> <span>消費明細清單</span>
+        </h3>
+        
+        <!-- Day Filter Select -->
+        <select id="dayFilterSelect" onchange="renderExpenseList()" class="px-2.5 py-1 rounded-xl border border-stone-200 text-xs font-bold text-[#1E293B] bg-white focus:outline-none">
+          <option value="all">全部天數</option>
+          <option value="day1">Day 1 (布魯塞爾)</option>
+          <option value="day2">Day 2 (根特/布魯日)</option>
+          <option value="day3">Day 3 (歐洲之星/巴黎)</option>
+          <option value="day4">Day 4 (巴黎羅浮宮)</option>
+          <option value="day5">Day 5 (巴黎奧賽)</option>
+          <option value="day6">Day 6 (巴黎鐵塔)</option>
+          <option value="day7">Day 7 (巴黎返程)</option>
+        </select>
+      </div>
+
+      <!-- Expense Items Container -->
+      <div id="expenseListContainer" class="space-y-2.5">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Data Tools (Export / Clear) -->
+    <section class="p-3 bg-stone-100 rounded-2xl flex items-center justify-between text-xs text-stone-500">
+      <span>資料存於本機瀏覽器中</span>
+      <div class="flex items-center gap-2">
+        <button onclick="exportExpensesJSON()" class="font-bold text-[#B45309] hover:underline">匯出 JSON</button>
+        <span>•</span>
+        <button onclick="resetToSampleExpenses()" class="font-bold text-red-500 hover:underline">重設範例</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-4 py-2">
+    <div class="max-w-md mx-auto flex items-center justify-around text-[10px] font-bold text-stone-500">
+      <a href="index.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <svg class="w-5 h-5 text-stone-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        <span>首頁</span>
+      </a>
+      <a href="day1.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🇧🇪</span>
+        <span>Day 1</span>
+      </a>
+      <a href="day2.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🌉</span>
+        <span>Day 2</span>
+      </a>
+      <a href="day3.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚄</span>
+        <span>Day 3</span>
+      </a>
+      <a href="ledger.html" class="flex flex-col items-center gap-1 text-[#B45309]">
+        <span class="text-sm leading-none">💰</span>
+        <span>帳本</span>
+      </a>
+      <a href="transport_guide.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚆</span>
+        <span>交通</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Add Expense Modal -->
+  <div id="dailyExpenseModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-sm rounded-3xl p-5 space-y-4 shadow-float animate-fade-in border border-[#E2E8F0]">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center font-black">💰</span>
+          <h3 class="text-sm font-black text-[#1E293B]">新增旅行消費支出</h3>
+        </div>
+        <button onclick="closeDailyExpenseModal()" class="text-stone-400 hover:text-stone-700 text-xl font-bold p-1">✕</button>
+      </div>
+
+      <form id="dailyExpenseForm" onsubmit="submitDailyExpense(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">消費項目名稱</label>
+          <input type="text" id="modalTitle" placeholder="例如：布魯日小木船遊船票" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">金額 (€ EUR)</label>
+            <input type="number" step="0.01" id="modalAmount" placeholder="0.00" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none font-bold text-[#B45309]" />
+          </div>
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">歸屬天數</label>
+            <select id="modalDaySelect" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+              <option value="day1">Day 1 (10/31 布魯塞爾)</option>
+              <option value="day2">Day 2 (11/01 根特/布魯日)</option>
+              <option value="day3">Day 3 (11/02 歐洲之星/巴黎)</option>
+              <option value="day4">Day 4 (11/03 巴黎羅浮宮)</option>
+              <option value="day5">Day 5 (11/04 巴黎奧賽)</option>
+              <option value="day6">Day 6 (11/05 巴黎鐵塔)</option>
+              <option value="day7">Day 7 (11/06 巴黎返程)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">消費類別</label>
+            <select id="modalCategory" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+              <option value="food">🍽️ 美食餐飲</option>
+              <option value="transport">🚆 交通車資</option>
+              <option value="tickets">🎟️ 門票票券</option>
+              <option value="shopping">🛍️ 伴手禮購物</option>
+              <option value="hotel">🏨 住宿費用</option>
+              <option value="other">📦 雜項支出</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">誰先代墊 (付款人)</label>
+            <select id="modalPayer" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+              <!-- Rendered by JS -->
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">分攤成員 (預設勾選 3 人均分)</label>
+          <div id="modalSplitCheckboxes" class="flex items-center gap-2">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">備註 (選填)</label>
+          <input type="text" id="modalNote" placeholder="例如：含三人船票" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none" />
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-[#B45309] hover:bg-[#92400E] text-white font-bold rounded-xl shadow-soft text-xs transition-all active:scale-98 mt-2">
+          確認儲存並分攤
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dedicated Ledger Rendering Script -->
+  <script>
+    let myChart = null;
+
+    function renderLedgerPage() {
+      // Update Inputs
+      document.getElementById('travelerName0').value = currentTravelers[0] || '我';
+      document.getElementById('travelerName1').value = currentTravelers[1] || '朋友 A';
+      document.getElementById('travelerName2').value = currentTravelers[2] || '朋友 B';
+      document.getElementById('exchangeRateInput').value = currentRate;
+      document.getElementById('currentRateText').textContent = currentRate.toFixed(1);
+
+      // Calculate Totals
+      const totalEUR = expenses.reduce((sum, e) => sum + (parseFloat(e.amountEUR) || 0), 0);
+      const totalTWD = Math.round(totalEUR * currentRate);
+      const avgEUR = currentTravelers.length > 0 ? (totalEUR / currentTravelers.length) : 0;
+      const avgTWD = Math.round(avgEUR * currentRate);
+
+      document.getElementById('totalExpenseEUR').textContent = `€${totalEUR.toFixed(2)}`;
+      document.getElementById('totalExpenseTWD').textContent = `(≈ NT$ ${totalTWD.toLocaleString()})`;
+      document.getElementById('avgExpenseEUR').textContent = `€${avgEUR.toFixed(2)}`;
+      document.getElementById('avgExpenseTWD').textContent = `≈ NT$ ${avgTWD.toLocaleString()} / 人`;
+      document.getElementById('txCountBadge').textContent = `${expenses.length} 筆消費`;
+
+      // Render Settlement
+      renderSettlement(totalEUR);
+
+      // Render Category Chart
+      renderCategoryChart();
+
+      // Render Expense List
+      renderExpenseList();
+    }
+
+    // Toggle Settings Panel
+    function toggleSettingsPanel() {
+      const panel = document.getElementById('settingsPanel');
+      const btn = document.getElementById('settingsToggleBtn');
+      if (panel.classList.contains('hidden')) {
+        panel.classList.remove('hidden');
+        btn.textContent = '收起設定 ▴';
+      } else {
+        panel.classList.add('hidden');
+        btn.textContent = '展開設定 ▾';
+      }
+    }
+
+    // Update Traveler Names
+    function updateTravelerNames() {
+      const t0 = document.getElementById('travelerName0').value.trim() || '我';
+      const t1 = document.getElementById('travelerName1').value.trim() || '朋友 A';
+      const t2 = document.getElementById('travelerName2').value.trim() || '朋友 B';
+      currentTravelers = [t0, t1, t2];
+      saveExpenses();
+      renderLedgerPage();
+    }
+
+    // Update Rate
+    function updateRateSetting() {
+      const r = parseFloat(document.getElementById('exchangeRateInput').value);
+      if (r && r > 0) {
+        currentRate = r;
+        saveExpenses();
+        renderLedgerPage();
+      }
+    }
+
+    // Calculate Multi-person Settlement
+    function renderSettlement(totalEUR) {
+      const container = document.getElementById('settlementPlanContainer');
+      if (!container) return;
+
+      if (expenses.length === 0) {
+        container.innerHTML = `<div class="p-4 bg-stone-50 rounded-2xl text-center text-xs text-stone-400">目前尚無任何消費記錄</div>`;
+        return;
+      }
+
+      // 1. Calculate each traveler's paid amount & their share
+      const balances = {};
+      currentTravelers.forEach(t => balances[t] = 0);
+
+      expenses.forEach(exp => {
+        const amt = parseFloat(exp.amountEUR) || 0;
+        const payer = exp.payer;
+        const splitWith = exp.splitWith && exp.splitWith.length > 0 ? exp.splitWith : currentTravelers;
+        const share = amt / splitWith.length;
+
+        // Payer gets credit
+        if (balances[payer] !== undefined) {
+          balances[payer] += amt;
+        }
+
+        // Each participant owes share
+        splitWith.forEach(t => {
+          if (balances[t] !== undefined) {
+            balances[t] -= share;
+          }
+        });
+      });
+
+      // 2. Separate into debtors and creditors
+      let debtors = [];
+      let creditors = [];
+
+      for (let person in balances) {
+        const net = Math.round(balances[person] * 100) / 100;
+        if (net < -0.01) {
+          debtors.push({ person, amount: -net });
+        } else if (net > 0.01) {
+          creditors.push({ person, amount: net });
+        }
+      }
+
+      // 3. Resolve debts
+      let transactions = [];
+      let i = 0;
+      let j = 0;
+
+      while (i < debtors.length && j < creditors.length) {
+        const settleAmt = Math.min(debtors[i].amount, creditors[j].amount);
+        transactions.push({
+          from: debtors[i].person,
+          to: creditors[j].person,
+          amountEUR: settleAmt,
+          amountTWD: Math.round(settleAmt * currentRate)
+        });
+
+        debtors[i].amount -= settleAmt;
+        creditors[j].amount -= settleAmt;
+
+        if (debtors[i].amount < 0.01) i++;
+        if (creditors[j].amount < 0.01) j++;
+      }
+
+      // Render UI
+      if (transactions.length === 0) {
+        container.innerHTML = `
+          <div class="p-3 bg-emerald-50 text-emerald-800 rounded-2xl text-xs font-bold flex items-center gap-2 border border-emerald-200">
+            <span>🎉</span> <span>目前大家都已完全結清，沒有任何人積欠！</span>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = transactions.map(tx => `
+        <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200/80 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-[#FEF3C7] text-[#B45309] font-black text-xs flex items-center justify-center">➔</span>
+            <div>
+              <p class="text-xs font-black text-[#1E293B]">
+                <span class="text-[#B45309]">${tx.from}</span> 應給 <span class="text-emerald-700">${tx.to}</span>
+              </p>
+              <span class="text-[10px] text-stone-500">最簡路徑平帳</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="text-sm font-black text-[#B45309]">€${tx.amountEUR.toFixed(2)}</span>
+            <span class="text-[10px] text-stone-400 block font-medium">≈ NT$ ${tx.amountTWD.toLocaleString()}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Copy Settlement to Clipboard
+    function copySettlementSummary() {
+      const items = document.querySelectorAll('#settlementPlanContainer > div');
+      if (items.length === 0) {
+        alert('目前無需平帳');
+        return;
+      }
+
+      let summaryText = `【比利時＋巴黎 3 人行 💰 結算明細】\n`;
+      const totalEUR = expenses.reduce((sum, e) => sum + (parseFloat(e.amountEUR) || 0), 0);
+      summaryText += `總支出：€${totalEUR.toFixed(2)} (≈ NT$ ${Math.round(totalEUR * currentRate).toLocaleString()})\n\n`;
+
+      const divs = document.querySelectorAll('#settlementPlanContainer p');
+      divs.forEach(d => {
+        summaryText += `• ${d.textContent.trim()}\n`;
+      });
+      summaryText += `\n(已自動計算最簡沖銷金額，大家可直接轉帳結平！)`;
+
+      navigator.clipboard.writeText(summaryText).then(() => {
+        showToast('結算明細已複製到剪貼簿，可直接貼至 LINE！');
+      }).catch(() => {
+        alert(summaryText);
+      });
+    }
+
+    // Category Chart Rendering
+    function renderCategoryChart() {
+      const categories = {
+        food: { label: '🍽️ 美食餐飲', color: '#F59E0B', total: 0 },
+        transport: { label: '🚆 交通車資', color: '#3B82F6', total: 0 },
+        tickets: { label: '🎟️ 門票票券', color: '#10B981', total: 0 },
+        shopping: { label: '🛍️ 伴手禮購物', color: '#EC4899', total: 0 },
+        hotel: { label: '🏨 住宿費用', color: '#8B5CF6', total: 0 },
+        other: { label: '📦 雜項支出', color: '#6B7280', total: 0 }
+      };
+
+      expenses.forEach(e => {
+        const cat = e.category || 'other';
+        if (categories[cat]) {
+          categories[cat].total += (parseFloat(e.amountEUR) || 0);
+        } else {
+          categories.other.total += (parseFloat(e.amountEUR) || 0);
+        }
+      });
+
+      const labels = [];
+      const data = [];
+      const colors = [];
+
+      for (let k in categories) {
+        if (categories[k].total > 0) {
+          labels.push(categories[k].label);
+          data.push(categories[k].total);
+          colors.push(categories[k].color);
+        }
+      }
+
+      const ctx = document.getElementById('categoryChart').getContext('2d');
+      if (myChart) myChart.destroy();
+
+      myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: data,
+            backgroundColor: colors,
+            borderWidth: 2,
+            borderColor: '#FFFFFF'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          cutout: '68%'
+        }
+      });
+
+      // Render legend grid
+      const listEl = document.getElementById('categoryBreakdownList');
+      listEl.innerHTML = Object.values(categories)
+        .filter(c => c.total > 0)
+        .map(c => `
+          <div class="flex items-center justify-between p-1.5 rounded-lg bg-stone-50">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full" style="background:${c.color}"></span>
+              <span class="text-stone-600 font-medium">${c.label}</span>
+            </span>
+            <span class="font-bold text-[#1E293B]">€${c.total.toFixed(1)}</span>
+          </div>
+        `).join('');
+    }
+
+    // Render Expense Items List
+    function renderExpenseList() {
+      const container = document.getElementById('expenseListContainer');
+      const filterDay = document.getElementById('dayFilterSelect')?.value || 'all';
+
+      let filtered = expenses;
+      if (filterDay !== 'all') {
+        filtered = expenses.filter(e => e.dayId === filterDay);
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="p-6 bg-white rounded-2xl text-center text-xs text-stone-400 border border-[#E2E8F0]">該篩選條件下尚無明細</div>`;
+        return;
+      }
+
+      const catBadges = {
+        food: 'bg-amber-50 text-amber-800 border-amber-200',
+        transport: 'bg-blue-50 text-blue-800 border-blue-200',
+        tickets: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+        shopping: 'bg-pink-50 text-pink-800 border-pink-200',
+        hotel: 'bg-purple-50 text-purple-800 border-purple-200',
+        other: 'bg-stone-100 text-stone-700 border-stone-200'
+      };
+
+      container.innerHTML = filtered.map(exp => {
+        const amtEUR = parseFloat(exp.amountEUR) || 0;
+        const amtTWD = Math.round(amtEUR * currentRate);
+        const splitText = exp.splitWith && exp.splitWith.length === currentTravelers.length
+          ? '3 人均分'
+          : `分攤: ${(exp.splitWith || []).join(', ')}`;
+
+        return `
+          <div class="bg-white p-3.5 rounded-2xl border border-[#E2E8F0] shadow-2xs hover:shadow-soft transition-all space-y-2">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-1.5 mb-1">
+                  <span class="text-[10px] font-bold px-1.5 py-0.5 rounded border ${catBadges[exp.category] || catBadges.other}">
+                    ${exp.category ? exp.category.toUpperCase() : 'EXPENSE'}
+                  </span>
+                  <span class="text-[10px] text-stone-400 font-bold uppercase">${exp.dayId || 'TRIP'}</span>
+                </div>
+                <h4 class="text-xs font-black text-[#1E293B]">${exp.title}</h4>
+              </div>
+              <div class="text-right">
+                <span class="text-sm font-black text-[#B45309]">€${amtEUR.toFixed(2)}</span>
+                <span class="text-[10px] text-stone-400 block">≈ NT$ ${amtTWD.toLocaleString()}</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-stone-100 text-[10px] text-stone-500">
+              <div class="flex items-center gap-1.5">
+                <span class="bg-stone-100 px-1.5 py-0.5 rounded font-bold text-stone-700">先付: ${exp.payer || '我'}</span>
+                <span>•</span>
+                <span>${splitText}</span>
+                ${exp.note ? `<span class="text-stone-400">(${exp.note})</span>` : ''}
+              </div>
+              <button onclick="deleteExpense('${exp.id}')" class="text-stone-300 hover:text-red-500 transition-colors p-1" title="刪除此筆">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Delete single expense
+    function deleteExpense(id) {
+      if (!confirm('確定要刪除這筆消費記錄嗎？')) return;
+      expenses = expenses.filter(e => e.id !== id);
+      saveExpenses();
+      renderLedgerPage();
+    }
+
+    // Export JSON
+    function exportExpensesJSON() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(expenses, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", "belgium_paris_travel_expenses.json");
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    // Reset Sample
+    function resetToSampleExpenses() {
+      if (!confirm('確定要重設回初始範例消費資料嗎？')) return;
+      localStorage.removeItem(STORAGE_KEY);
+      loadStoredData();
+      renderLedgerPage();
+    }
+
+    // Hook render on DOM Ready
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(renderLedgerPage, 100);
+    });
+  </script>
+
+</body>
+</html>

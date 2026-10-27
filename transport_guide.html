@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>🚆 歐洲交通與防盜全指南 | 比利時・巴黎 Travel Companion</title>
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Trip Data & Core Scripts -->
+  <script src="./tripData.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1E293B] antialiased selection:bg-[#EFF6FF] selection:text-[#1E40AF] min-h-screen flex flex-col pb-24">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 glass-header px-4 py-3 shadow-sm">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <a href="index.html" class="p-2 -ml-2 rounded-full hover:bg-stone-200/50 text-[#1E293B] transition-colors" aria-label="返回首頁">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </a>
+        <div>
+          <h1 class="text-base font-black text-[#1E293B] leading-tight font-serif-title">歐洲交通與安全百科</h1>
+          <p class="text-[11px] text-stone-500 font-medium">SNCB 半價・Eurostar・巴黎地鐵・防扒手</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1 bg-[#EFF6FF] px-2.5 py-1 rounded-full text-[11px] font-bold text-[#1E40AF] border border-[#BFDBFE]">
+        <span>實戰錦囊</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-6 w-full">
+
+    <!-- Section 1: SNCB 比利時國鐵 -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-3.5">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center text-sm font-black">🇧🇪</span>
+        <div>
+          <h2 class="text-sm font-black text-[#1E293B]">SNCB 比利時國鐵省錢秘技</h2>
+          <p class="text-[10px] text-stone-500 font-medium">週末票 50% 折扣 ＆ 中途下車規範</p>
+        </div>
+      </div>
+
+      <!-- Weekend Ticket Card -->
+      <div class="bg-[#FFFBEB] p-3.5 rounded-2xl border border-[#FDE68A] space-y-2 text-xs">
+        <div class="flex items-center justify-between">
+          <span class="font-extrabold text-[#92400E]">💡 週末票 (Weekend Ticket) 50% 折扣</span>
+          <span class="text-[10px] bg-[#FEF3C7] text-[#92400E] font-bold px-2 py-0.5 rounded-full">強烈推薦</span>
+        </div>
+        <p class="text-[#78350F] leading-relaxed">
+          SNCB 國鐵在<strong>每週五 19:00 起、週六、週日以及國定假日全天</strong>，提供往返標準二等車廂 <strong>50% 半價優惠</strong>！
+        </p>
+        <div class="pt-2 border-t border-[#FDE68A]/60 text-[11px] text-[#78350F] space-y-1">
+          <p>• <strong>11/1 (週六) 為諸聖節國定假日</strong>：完全符合半價資格！</p>
+          <p>• <strong>中途下車 (Break of Journey)</strong>：購買布魯塞爾 ➔ 布魯日往返週末票，因為根特 (Gent) 正好位在同一條鐵路直線上，去程在根特中途下車出站遊覽、逛完後再持同一張票上車前往布魯日，完全符合規定！</p>
+        </div>
+      </div>
+
+      <!-- App Download Note -->
+      <div class="flex items-center justify-between p-3 bg-stone-50 rounded-2xl border border-stone-200/70 text-xs">
+        <div class="space-y-0.5">
+          <span class="font-bold text-[#1E293B] block">官方手機 App 購票最方便</span>
+          <span class="text-[10px] text-stone-500">下載「SNCB / NMBS」App，即時查月台與誤點</span>
+        </div>
+        <a href="https://www.belgiantrain.be/en" target="_blank" class="text-xs font-bold text-[#B45309] hover:underline">
+          官方網站 ➔
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 2: Eurostar 歐洲之星 -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-3.5">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-xl bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center text-sm font-black">🚄</span>
+        <div>
+          <h2 class="text-sm font-black text-[#1E293B]">Eurostar 跨國高鐵 (布魯塞爾 ➔ 巴黎)</h2>
+          <p class="text-[10px] text-stone-500 font-medium">車次：Eurostar 9436 • 12:43 發車</p>
+        </div>
+      </div>
+
+      <div class="space-y-2.5 text-xs">
+        <!-- Station & Boarding Rules -->
+        <div class="bg-stone-50 p-3 rounded-2xl border border-stone-200/70 space-y-1.5">
+          <span class="font-bold text-[#1E293B] block">⚠️ Bruxelles-Midi 閘門提前關閉規定</span>
+          <p class="text-stone-600 leading-relaxed">
+            申根境內高鐵（比利時至法國）<strong>不需要辦理出境海關與蓋護照章</strong>，但進站仍需掃描車票 QR Code。
+            <br/><span class="text-red-600 font-bold">重要提示：進站閘門會在發車前 15–20 分鐘停止刷票進站！請最晚於 12:15 抵達車站。</span>
+          </p>
+        </div>
+
+        <!-- Luggage Rule -->
+        <div class="bg-stone-50 p-3 rounded-2xl border border-stone-200/70 space-y-1.5">
+          <span class="font-bold text-[#1E293B] block">🧳 行李放置指引</span>
+          <p class="text-stone-600 leading-relaxed">
+            Eurostar 每人可攜帶 2 件大型行李箱（最長邊不超過 85cm）＋ 1 件隨身隨身背包，無重量上限。登車後將大行李放置於車廂門口兩側的多層行李架，貴重物品（護照、錢包、筆電）務必隨身保管！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 巴黎大眾運輸 -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-3.5">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-xl bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center text-sm font-black">🇫🇷</span>
+        <div>
+          <h2 class="text-sm font-black text-[#1E293B]">巴黎地鐵與交通卡攻略</h2>
+          <p class="text-[10px] text-stone-500 font-medium">Navigo Easy 虛擬卡 vs 紙本票</p>
+        </div>
+      </div>
+
+      <div class="space-y-2.5 text-xs text-stone-600">
+        <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200/70 space-y-1.5">
+          <span class="font-bold text-[#1E293B] block">📱 推薦方式：Apple Wallet / Google 錢包加入 Navigo</span>
+          <p class="leading-relaxed">
+            iPhone 或 Android 手機可在錢包 App 中直接新增「Navigo」虛擬交通卡，在手機上直接刷卡加值單程票 (Ticket t+ Carnet 10 聯票) 或 Navigo 日票，進出站免解鎖手機、直接感應閘門，省去排隊買票的繁瑣！
+          </p>
+        </div>
+
+        <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200/70 space-y-1.5">
+          <span class="font-bold text-[#1E293B] block">🚆 機場快線 RER B (戴高樂機場 CDG)</span>
+          <p class="leading-relaxed">
+            Day 7 前往戴高樂機場可搭乘 RER B 線直達（約 35 分鐘，單程約 €11.80），或 3 人直接叫 Uber / G7 計程車（市區至 CDG 機場有官方統一一口價：右岸約 €56、左岸約 €65），3 人分攤非常划算！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 歐洲防盜防扒手手冊 -->
+    <section class="bg-gradient-to-br from-[#FEF2F2] to-[#FFF1F2] rounded-3xl p-5 border border-[#FECDD3] shadow-soft space-y-3.5">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-sm font-black">🛡️</span>
+        <div>
+          <h2 class="text-sm font-black text-red-900">歐洲旅行防扒手防騙黃金守則</h2>
+          <p class="text-[10px] text-red-700 font-medium">布魯塞爾南站 ＆ 巴黎高警戒區指南</p>
+        </div>
+      </div>
+
+      <div class="space-y-2.5 text-xs text-red-900/90 leading-relaxed">
+        <div class="bg-white/80 p-3 rounded-2xl border border-red-200 space-y-1">
+          <strong class="text-red-950 block">1. 車站與車廂「門口防搶」</strong>
+          <p>
+            在布魯塞爾南站 (Midi) 與巴黎北站 (Gare du Nord)、以及地鐵關門警示音響起瞬間，絕不要站在車門邊低頭滑手機！扒手最愛在「關門前 1 秒搶奪手機並跳出車廂」。
+          </p>
+        </div>
+
+        <div class="bg-white/80 p-3 rounded-2xl border border-red-200 space-y-1">
+          <strong class="text-red-950 block">2. 經典街頭騙局拆解</strong>
+          <p>
+            • <strong>假連署簽名板 (Petition)</strong>：假裝聾啞人士拿板子要你簽名，另有同夥趁機摸走外套口袋物品。直接揮手說「No」快步離開！
+            <br/>• <strong>蒙馬特綁幸運紅繩</strong>：在聖心堂階梯主動靠近拉你的手綁紅繩後索要 20 歐。雙手插口袋或走側邊纜車道。
+            <br/>• <strong>地上撿金戒指 / 潑髒水借故幫忙擦拭</strong>：完全不要理會，直接遠離。
+          </p>
+        </div>
+
+        <div class="bg-white/80 p-3 rounded-2xl border border-red-200 space-y-1">
+          <strong class="text-red-950 block">3. 隨身財物配置建議</strong>
+          <p>
+            • 後背包在人多景點或地鐵內<strong>務必往前背</strong>。
+            <br/>• 手機加上<strong>防盜斜背繩</strong>，拍照時手腕套住防摔防奪。
+            <br/>• 信用卡與大額現金分開存放，手機綁定 Apple Pay / Google Pay 感應最安全。
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-4 py-2">
+    <div class="max-w-md mx-auto flex items-center justify-around text-[10px] font-bold text-stone-500">
+      <a href="index.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <svg class="w-5 h-5 text-stone-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        <span>首頁</span>
+      </a>
+      <a href="day1.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🇧🇪</span>
+        <span>Day 1</span>
+      </a>
+      <a href="day2.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🌉</span>
+        <span>Day 2</span>
+      </a>
+      <a href="day3.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚄</span>
+        <span>Day 3</span>
+      </a>
+      <a href="ledger.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
+        <span class="text-sm leading-none">💰</span>
+        <span>帳本</span>
+      </a>
+      <a href="transport_guide.html" class="flex flex-col items-center gap-1 text-[#1E40AF]">
+        <span class="text-sm leading-none">🚆</span>
+        <span>交通</span>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>

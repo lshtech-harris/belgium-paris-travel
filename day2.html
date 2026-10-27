@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Day 2 根特 ＆ 布魯日雙城一日遊 | 比利時・巴黎 Travel Companion</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Design Tokens & Style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Trip Data & Core Scripts -->
+  <script src="./tripData.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1E293B] antialiased selection:bg-[#FEF3C7] selection:text-[#92400E]">
+
+  <!-- Top Sticky Header -->
+  <header class="sticky top-0 z-40 glass-header px-4 py-3 shadow-sm">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <a href="./index.html" class="p-2 -ml-2 rounded-full hover:bg-stone-200/50 text-[#1E293B] transition-colors" aria-label="返回首頁">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </a>
+        <div>
+          <h1 class="text-base font-black text-[#1E293B] leading-tight font-serif-title">Day 2 行程規劃</h1>
+          <p class="text-[11px] text-stone-500 font-medium">2026.11.01 (週六) • 根特 Ghent ➔ 布魯日 Bruges</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1 bg-[#FEF3C7] px-2.5 py-1 rounded-full text-[11px] font-bold text-[#92400E] border border-[#FDE68A]">
+        <span>Day 2 / 7</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
+
+    <!-- Day Selector Tabs -->
+    <div class="flex items-center justify-between gap-1.5 bg-white p-1.5 rounded-2xl border border-[#E2E8F0] shadow-soft overflow-x-auto no-scrollbar">
+      <a href="./day1.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 1
+      </a>
+      <a href="./day2.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap bg-[#B45309] text-white shadow-soft">
+        Day 2
+      </a>
+      <a href="./day3.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 3
+      </a>
+      <a href="./day4.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 4
+      </a>
+      <a href="./day5.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 5
+      </a>
+      <a href="./day6.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 6
+      </a>
+      <a href="./day7.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 7
+      </a>
+    </div>
+
+    <!-- Day 2 Header & Route Card -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-4 relative overflow-hidden">
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="bg-[#ECFDF5] text-[#065F46] font-black px-3 py-1 rounded-xl text-xs">
+            DAY 2 • 2026 / 11 / 01 (六) • 諸聖節
+          </span>
+          <div class="flex items-center gap-1">
+            <a href="./day1.html" class="p-1 rounded-lg border border-stone-200 hover:bg-stone-100 text-[#1E293B]" title="返回 Day 1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </a>
+            <a href="./day3.html" class="p-1 rounded-lg border border-stone-200 hover:bg-stone-100 text-[#1E293B]" title="前往 Day 3">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-black text-[#1E293B] font-serif-title leading-tight">
+          根特中世紀天際線 ➔ 布魯日浪漫運河 ➔ 玫瑰碼頭夕暮
+        </h2>
+
+        <!-- Route Badge -->
+        <div class="inline-flex items-center gap-1.5 bg-[#FAF8F5] px-3 py-1.5 rounded-full text-xs font-semibold text-[#B45309] border border-stone-200">
+          <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>布魯塞爾 → 根特 (AM) → 布魯日 (PM) → 布魯塞爾</span>
+        </div>
+      </div>
+
+      <!-- Top Daily Expense Card (Day 2 今日記帳) -->
+      <div id="daily-ledger-day2" class="bg-[#FAF8F5] p-3.5 rounded-2xl border border-[#E2E8F0] space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center text-sm font-black">💰</span>
+            <div>
+              <h3 class="text-xs font-black text-[#1E293B]">Day 2 今日記帳</h3>
+              <p class="text-[10px] text-stone-500 font-medium">實時 3 人分攤 • 自動歸屬今日</p>
+            </div>
+          </div>
+          <button onclick="openDailyExpenseModal('day2')" class="bg-[#B45309] hover:bg-[#92400E] text-white font-bold px-3 py-1.5 text-xs rounded-xl shadow-soft transition-all flex items-center gap-1">
+            <span>＋ 記一筆</span>
+          </button>
+        </div>
+
+        <div class="bg-white p-2.5 rounded-xl border border-stone-200/60 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-stone-400 uppercase block">今日總支出</span>
+            <p id="daily-total-day2" class="text-sm font-black text-[#B45309]">€0.00 <span class="text-xs text-stone-400 font-normal">(≈ NT$ 0)</span></p>
+          </div>
+          <a href="ledger.html" class="text-xs font-bold text-[#1E293B] hover:underline flex items-center gap-0.5">
+            <span>查看完整帳本 ➔</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential Tips & Reminders -->
+    <section class="bg-[#FFFBEB] rounded-2xl p-4 border border-[#FDE68A] space-y-2">
+      <div class="flex items-center gap-1.5 text-[#92400E] font-black text-xs uppercase tracking-wider">
+        <span>💡</span> <span>Day 2 雙城一日遊核心訣竅</span>
+      </div>
+      <ul class="text-xs text-[#78350F] space-y-1.5 list-disc list-inside leading-relaxed">
+        <li><strong>SNCB 週末半價票</strong>：今日適逢週末＋諸聖節，往返布魯日買 <strong>Weekend Ticket</strong> 享 50% 優惠，去程在中途的根特下車出站觀光完全合法合規！</li>
+        <li><strong>不搭根特遊船</strong>：根特專注走訪三塔、聖米歇爾橋與香草河岸；運河遊船留給下午的布魯日，省時不重複。</li>
+        <li><strong>⚠️ 布魯日遊船優先</strong>：11 月天黑早（約 17:15），冬季遊船通常在 16:00～16:30 停止發船，抵達布魯日請立刻前往碼頭搭乘！</li>
+        <li><strong>玫瑰碼頭藍調時刻</strong>：17:00 左右天色轉深藍、暖黃街燈亮起，此時水面倒映鐘樓，是布魯日最經典明信片畫面。</li>
+      </ul>
+    </section>
+
+    <!-- Timeline Itinerary Details -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between px-1">
+        <h3 class="text-sm font-black text-[#1E293B] uppercase tracking-wider flex items-center gap-1.5">
+          <span>🕒</span> <span>雙城時間軸 (Timeline)</span>
+        </h3>
+        <a href="https://maps.google.com/?q=Bruges+Belfry" target="_blank" class="text-xs font-bold text-[#B45309] hover:underline flex items-center gap-1">
+          <span>開啟布魯日地圖</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+      <div class="space-y-3.5">
+
+        <!-- 08:30 Train -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">08:30</span>
+            <span class="text-[11px] bg-blue-50 text-blue-600 font-bold px-1.5 py-0.5 rounded">🚆 SNCB 國鐵</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">布魯塞爾出發 ➔ 前往根特 Ghent</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Bruxelles-Central 搭乘 IC 列車前往 Gent-Sint-Pieters（約 35 分鐘），出站後搭乘 1 號路面電車直達舊城區 Korenmarkt。
+          </p>
+        </div>
+
+        <!-- 09:30 St Bavo -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">09:30</span>
+            <span class="text-[11px] bg-amber-50 text-amber-700 font-bold px-1.5 py-0.5 rounded">🎨 藝術國寶</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">聖巴夫主教座堂 (Saint Bavo's Cathedral)</h4>
+            <a href="https://maps.google.com/?q=Saint+Bavo's+Cathedral+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            羅馬式與哥德式融合大教堂，收藏北方文藝復興凡艾克兄弟的曠世巨作《神秘羔羊之崇拜（根特祭壇畫）》。
+            <br/><span class="text-[#B45309] font-semibold">⚠️ 諸聖節上午若遇宗教彌撒，可先參觀鐘樓或外觀，避開儀式時間。</span>
+          </p>
+        </div>
+
+        <!-- 10:15 Belfry -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">10:15</span>
+            <span class="text-[11px] text-stone-400 font-medium">世界文化遺產</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">根特鐘樓 ＋ 三塔天際線</h4>
+            <a href="https://maps.google.com/?q=Belfry+of+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            91 公尺高的中世紀鐘樓，頂端裝飾象徵自由的金色飛龍。與聖巴夫大教堂、聖尼閣教堂連成一線，構成根特最富盛名的「中世紀三塔」。
+          </p>
+        </div>
+
+        <!-- 11:00 St Michael & Graslei -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">11:00</span>
+            <span class="text-[11px] bg-amber-50 text-amber-800 font-bold px-1.5 py-0.5 rounded">⭐️ 根特最美視角</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">聖米歇爾橋 ＋ 香草河岸 (Graslei)</h4>
+            <a href="https://maps.google.com/?q=Saint+Michael's+Bridge+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            站在聖米歇爾橋上，可以一次將三塔天際線與萊厄河盡收眼底，是全根特第一名的拍照打卡點！走下橋漫步於香草河岸與穀物河岸，欣賞建於 12–17 世紀的華麗行會山形牆建築倒影。
+          </p>
+        </div>
+
+        <!-- 11:45 Gravensteen -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">11:45</span>
+            <span class="text-[11px] text-stone-400 font-medium">古堡留影</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">格拉文斯丁伯爵城堡 (Gravensteen)</h4>
+            <a href="https://maps.google.com/?q=Gravensteen+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            市中心被護城河環繞的中世紀石造城堡，外觀非常壯觀好拍！建議在橋上拍攝外觀留影即可，把寶貴的參觀時間留給下午的布魯日。
+          </p>
+        </div>
+
+        <!-- 12:15 Lunch -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">12:15</span>
+            <span class="text-[11px] bg-red-50 text-red-600 font-bold px-1.5 py-0.5 rounded">🍽️ 根特美味</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">午餐：傳統奶油燉雞 ＆ 買 Cuberdons 鼻子糖</h4>
+            <a href="https://maps.google.com/?q=Groentenmarkt+Ghent" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            在 Patershol 古老石板巷弄品嚐根特名菜 <strong>Waterzooi（法蘭德斯傳統奶油燉雞/魚湯）</strong>。飯後在蔬菜市場 (Groentenmarkt) 路邊推車買一份外脆內流心的紫錐鼻子糖 (Cuberdon)！
+          </p>
+        </div>
+
+        <!-- 13:15 Train to Bruges -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">13:15</span>
+            <span class="text-[11px] bg-blue-50 text-blue-600 font-bold px-1.5 py-0.5 rounded">🚆 轉場布魯日</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">搭火車前往布魯日 Bruges</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            搭電車回 Gent-Sint-Pieters，搭乘 IC 列車前往 Brugge（車程僅約 25 分鐘）。
+          </p>
+        </div>
+
+        <!-- 14:00 Minnewater -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">14:00</span>
+            <span class="text-[11px] text-stone-400 font-medium">水都門戶</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">愛之湖 (Minnewater) ＆ 天鵝湖公園</h4>
+            <a href="https://maps.google.com/?q=Minnewaterpark+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            從火車站步行進入舊城的必經之處。古老的紅磚防禦塔、垂柳與河面成群悠游的白天鵝，完美揭開童話小鎮序幕。
+          </p>
+        </div>
+
+        <!-- 14:45 Canal Cruise -->
+        <div class="bg-gradient-to-br from-white to-[#EFF6FF] rounded-2xl p-4 border border-[#BFDBFE] shadow-soft space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#DBEAFE] px-2 py-0.5 rounded-md">14:45</span>
+            <span class="text-[11px] bg-[#EFF6FF] text-[#1E40AF] font-bold px-1.5 py-0.5 rounded">⭐️ 核心任務</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">布魯日運河遊船 (Canal Cruise)</h4>
+            <a href="https://maps.google.com/?q=Rozenhoedkaai+Bruges" target="_blank" class="text-[11px] text-[#1E40AF] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            抵達布魯日<strong>第一優先排隊搭船</strong>！搭乘露天小船在水面穿過一座座古石拱橋，仰望沿岸百年紅磚老宅與垂落水面的爬藤。航程約 35 分鐘，票價約 €12–15/人，是北方威尼斯最不可錯過的精華！
+          </p>
+        </div>
+
+        <!-- 15:45 Burg & Holy Blood -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">15:45</span>
+            <span class="text-[11px] text-stone-400 font-medium">歷史精粹</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">城堡廣場 (Burg) ＆ 聖血教堂</h4>
+            <a href="https://maps.google.com/?q=Basilica+of+the+Holy+Blood+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            走下船後步行 3 分鐘抵達城堡廣場，欣賞華麗鍍金的哥德式市政廳。一旁的聖血聖殿收藏了 12 世紀十字軍東征帶回的水晶聖血瓶。
+          </p>
+        </div>
+
+        <!-- 16:30 Markt & Belfry -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">16:30</span>
+            <span class="text-[11px] bg-amber-50 text-amber-800 font-bold px-1.5 py-0.5 rounded">⭐️ 經典地標</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">市集廣場 (Markt) ＆ 布魯日鐘樓</h4>
+            <a href="https://maps.google.com/?q=Markt+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            布魯日的心臟！廣場被七彩山形屋餐廳與新哥德式省議會大廈環繞，中央矗立著 83 公尺高聳的布魯日鐘樓（電影《殺手沒有假期 In Bruges》主景）。
+          </p>
+        </div>
+
+        <!-- 17:00 Rozenhoedkaai Blue Hour -->
+        <div class="bg-gradient-to-br from-white to-[#FEF3C7] rounded-2xl p-4 border border-[#FDE68A] shadow-soft space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">17:00 - 17:30</span>
+            <span class="text-[11px] bg-[#FEF3C7] text-[#92400E] font-bold px-1.5 py-0.5 rounded">📸 絕美藍調日落</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">玫瑰碼頭 (Rozenhoedkaai) 藍調夜景 ⭐️</h4>
+            <a href="https://maps.google.com/?q=Rozenhoedkaai+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            11 月約 17:15 日落，此時天空轉為深邃魔幻藍調 (Blue Hour)，兩岸復古街燈初上，運河水面倒映著中世紀鐘樓與紅磚建築，是整座布魯日最令人屏息的明信片絕景！
+          </p>
+        </div>
+
+        <!-- 17:30 The Waffle Duke -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">17:30</span>
+            <span class="text-[11px] bg-yellow-50 text-yellow-700 font-bold px-1.5 py-0.5 rounded">🧇 下午茶</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">The Waffle Duke 鬆餅</h4>
+            <a href="https://maps.google.com/?q=The+Waffle+Duke+Bruges" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            吃朋友大力推薦的人氣鬆餅！熱騰騰的現烤脆皮鬆餅淋上香濃比利時黑巧克力醬與焦糖 Lotus 餅乾碎，在冷冷的 11 月傍晚吃一口無比幸福。
+          </p>
+        </div>
+
+        <!-- 18:15 Dinner & Beer -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">18:15</span>
+            <span class="text-[11px] bg-red-50 text-red-600 font-bold px-1.5 py-0.5 rounded">🍺 布魯日晚宴</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">布魯日老城晚餐 ＆ Brugse Zot 啤酒</h4>
+            <a href="https://maps.google.com/?q=Brouwerij+De+Halve+Maan" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            在溫馨的石造餐館享用熱騰騰的法蘭德斯啤酒燉牛肉 (Carbonnade Flamande) 配金黃脆薯。品嚐布魯日最具代表性的 <strong>Brugse Zot（布魯日小丑啤酒）</strong> 或重口味的 Straffe Hendrik 修道院黑啤酒。
+          </p>
+        </div>
+
+        <!-- 20:00 Train return -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">20:00</span>
+            <span class="text-[11px] text-stone-400 font-medium">返回布魯塞爾</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">搭火車返回布魯塞爾 (Brussels)</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            漫步回 Brugge 火車站，搭乘 IC 列車直達 Bruxelles-Central（車程約 60 分鐘），回飯店休息，整理打包明日前往巴黎的大行李。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Daily Expense Modal -->
+  <div id="dailyExpenseModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-sm rounded-3xl p-5 space-y-4 shadow-float animate-fade-in border border-[#E2E8F0]">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center font-black">💰</span>
+          <h3 class="text-sm font-black text-[#1E293B]">新增今日記帳 (Day 2)</h3>
+        </div>
+        <button onclick="closeDailyExpenseModal()" class="text-stone-400 hover:text-stone-700 text-xl font-bold p-1">✕</button>
+      </div>
+
+      <form id="dailyExpenseForm" onsubmit="submitDailyExpense(event)" class="space-y-3 text-xs">
+        <input type="hidden" id="modalDaySelect" value="day2" />
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">消費項目名稱</label>
+          <input type="text" id="modalTitle" placeholder="例如：布魯日運河遊船票" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">金額 (€ EUR)</label>
+            <input type="number" step="0.01" id="modalAmount" placeholder="0.00" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none font-bold text-[#B45309]" />
+          </div>
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">消費類別</label>
+            <select id="modalCategory" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+              <option value="tickets">🎟️ 門票票券</option>
+              <option value="transport">🚆 交通車資</option>
+              <option value="food">🍽️ 美食餐飲</option>
+              <option value="shopping">🛍️ 伴手禮購物</option>
+              <option value="hotel">🏨 住宿費用</option>
+              <option value="other">📦 雜項支出</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">付款人</label>
+          <select id="modalPayer" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+            <!-- Rendered by JS -->
+          </select>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">分攤成員 (預設 3 人均分)</label>
+          <div id="modalSplitCheckboxes" class="flex items-center gap-2">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">備註說明 (選填)</label>
+          <input type="text" id="modalNote" placeholder="例如：The Waffle Duke 鬆餅" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none" />
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-[#B45309] hover:bg-[#92400E] text-white font-bold rounded-xl shadow-soft text-xs transition-all active:scale-98 mt-2">
+          確認儲存並分攤
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-4 py-2">
+    <div class="max-w-md mx-auto flex items-center justify-around text-[10px] font-bold text-stone-500">
+      <a href="index.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <svg class="w-5 h-5 text-stone-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        <span>首頁</span>
+      </a>
+      <a href="day1.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🇧🇪</span>
+        <span>Day 1</span>
+      </a>
+      <a href="day2.html" class="flex flex-col items-center gap-1 text-[#B45309]">
+        <span class="text-sm leading-none">🌉</span>
+        <span>Day 2</span>
+      </a>
+      <a href="day3.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚄</span>
+        <span>Day 3</span>
+      </a>
+      <a href="ledger.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
+        <span class="text-sm leading-none">💰</span>
+        <span>帳本</span>
+      </a>
+      <a href="transport_guide.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚆</span>
+        <span>交通</span>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>

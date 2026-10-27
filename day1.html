@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Day 1 布魯塞爾 🎃 萬聖節夜景 | 比利時・巴黎 Travel Companion</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Design Tokens & Style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Trip Data & Core Scripts -->
+  <script src="./tripData.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1E293B] antialiased selection:bg-[#FEF3C7] selection:text-[#92400E]">
+
+  <!-- Top Sticky Header -->
+  <header class="sticky top-0 z-40 glass-header px-4 py-3 shadow-sm">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <a href="./index.html" class="p-2 -ml-2 rounded-full hover:bg-stone-200/50 text-[#1E293B] transition-colors" aria-label="返回首頁">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </a>
+        <div>
+          <h1 class="text-base font-black text-[#1E293B] leading-tight font-serif-title">Day 1 行程規劃</h1>
+          <p class="text-[11px] text-stone-500 font-medium">2026.10.31 (週五) • 布魯塞爾 🎃 萬聖夜</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1 bg-[#FEF3C7] px-2.5 py-1 rounded-full text-[11px] font-bold text-[#92400E] border border-[#FDE68A]">
+        <span>Day 1 / 7</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
+
+    <!-- Day Selector Tabs -->
+    <div class="flex items-center justify-between gap-1.5 bg-white p-1.5 rounded-2xl border border-[#E2E8F0] shadow-soft overflow-x-auto no-scrollbar">
+      <a href="./day1.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap bg-[#B45309] text-white shadow-soft">
+        Day 1
+      </a>
+      <a href="./day2.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 2
+      </a>
+      <a href="./day3.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 3
+      </a>
+      <a href="./day4.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 4
+      </a>
+      <a href="./day5.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 5
+      </a>
+      <a href="./day6.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 6
+      </a>
+      <a href="./day7.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 7
+      </a>
+    </div>
+
+    <!-- Day 1 Header & Route Card -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-4 relative overflow-hidden">
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="bg-[#FEF3C7] text-[#92400E] font-black px-3 py-1 rounded-xl text-xs">
+            DAY 1 • 2026 / 10 / 31 (五)
+          </span>
+          <div class="flex items-center gap-1">
+            <span class="p-1 rounded-lg border border-stone-200 opacity-30 cursor-not-allowed">
+              <svg class="w-3.5 h-3.5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </span>
+            <a href="./day2.html" class="p-1 rounded-lg border border-stone-200 hover:bg-stone-100 text-[#1E293B]" title="前往 Day 2">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-black text-[#1E293B] font-serif-title leading-tight">
+          布魯塞爾老城核心 ➔ WOLF 萬聖狂歡 ➔ 大廣場夜景
+        </h2>
+
+        <!-- Route Badge -->
+        <div class="inline-flex items-center gap-1.5 bg-[#FAF8F5] px-3 py-1.5 rounded-full text-xs font-semibold text-[#B45309] border border-stone-200">
+          <svg class="w-3.5 h-3.5 text-[#B45309]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>大教堂 → 聖休伯特拱廊街 → 大廣場 → 尿尿小童 → WOLF</span>
+        </div>
+      </div>
+
+      <!-- Top Daily Expense Card (Day 1 今日記帳) -->
+      <div id="daily-ledger-day1" class="bg-[#FAF8F5] p-3.5 rounded-2xl border border-[#E2E8F0] space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center text-sm font-black">💰</span>
+            <div>
+              <h3 class="text-xs font-black text-[#1E293B]">Day 1 今日記帳</h3>
+              <p class="text-[10px] text-stone-500 font-medium">實時 3 人分攤 • 自動歸屬今日</p>
+            </div>
+          </div>
+          <button onclick="openDailyExpenseModal('day1')" class="bg-[#B45309] hover:bg-[#92400E] text-white font-bold px-3 py-1.5 text-xs rounded-xl shadow-soft transition-all flex items-center gap-1">
+            <span>＋ 記一筆</span>
+          </button>
+        </div>
+
+        <!-- Today's Total Summary Badges -->
+        <div class="bg-white p-2.5 rounded-xl border border-stone-200/60 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-stone-400 uppercase block">今日總支出</span>
+            <p id="daily-total-day1" class="text-sm font-black text-[#B45309]">€0.00 <span class="text-xs text-stone-400 font-normal">(≈ NT$ 0)</span></p>
+          </div>
+          <a href="ledger.html" class="text-xs font-bold text-[#1E293B] hover:underline flex items-center gap-0.5">
+            <span>查看完整帳本 ➔</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential Tips & Reminders -->
+    <section class="bg-[#FFFBEB] rounded-2xl p-4 border border-[#FDE68A] space-y-2">
+      <div class="flex items-center gap-1.5 text-[#92400E] font-black text-xs uppercase tracking-wider">
+        <span>💡</span> <span>Day 1 漫步重點備忘</span>
+      </div>
+      <ul class="text-xs text-[#78350F] space-y-1.5 list-disc list-inside leading-relaxed">
+        <li><strong>全程步行即可</strong>：景點全集中於布魯塞爾歷史中心，穿梭巷弄體驗最佳，不需搭地鐵。</li>
+        <li><strong>大廣場雙重享受</strong>：布魯塞爾大廣場 (Grand-Place) 白天看雕刻細節、晚上看金色打光，感覺完全不同！</li>
+        <li><strong>鬆餅吃法大解密</strong>：Maison Dandoy 的布魯塞爾鬆餅外脆內空靈輕盈；列日鬆餅扎實有焦糖珍珠糖，推薦 3 人點雙拼分食。</li>
+        <li><strong>萬聖派對</strong>：WOLF Food Market 17:00 起有免費彩妝，19:00 音樂狂歡，直接在市集解決晚餐與小酌。</li>
+      </ul>
+    </section>
+
+    <!-- Timeline Itinerary Details -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between px-1">
+        <h3 class="text-sm font-black text-[#1E293B] uppercase tracking-wider flex items-center gap-1.5">
+          <span>🕒</span> <span>詳細行程時間軸 (Timeline)</span>
+        </h3>
+        <a href="https://maps.google.com/?q=Grand-Place+Brussels" target="_blank" class="text-xs font-bold text-[#B45309] hover:underline flex items-center gap-1">
+          <span>開啟 Google 地圖</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+      <div class="space-y-3.5">
+
+        <!-- 11:40 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">11:40</span>
+            <span class="text-[11px] text-stone-400 font-medium">交通接駁</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">抵達布魯塞爾 ➔ 飯店放行李</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            抵達布魯塞爾機場 (BRU) 或車站，搭乘快線前往市中心飯店寄存行李，輕裝出發展開老城散步。
+          </p>
+        </div>
+
+        <!-- 12:30 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">12:30</span>
+            <span class="text-[11px] bg-red-50 text-red-600 font-bold px-1.5 py-0.5 rounded">🍟 比利時名物</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">午餐：Frites Atelier 頂級比利時薯條</h4>
+            <a href="https://maps.google.com/?q=Frites+Atelier+Brussels" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            荷蘭米其林名廚 Sergio Herman 創立的精品薯條店，雙重油炸外酥內綿密，推薦必點<strong>特調松露蛋黃醬 (Truffle Mayo)</strong> 或比利時傳統燉牛肉醬 (Flemish Beef Stew)！
+          </p>
+        </div>
+
+        <!-- 13:30 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">13:30</span>
+            <span class="text-[11px] bg-blue-50 text-blue-600 font-bold px-1.5 py-0.5 rounded">🏛️ 哥德式地標</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">聖彌額爾聖古都勒主教座堂</h4>
+            <a href="https://maps.google.com/?q=St+Michael+and+St+Gudula+Cathedral+Brussels" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Cathédrale Saints-Michel-et-Gudule，莊嚴的雙塔哥德式外觀（神似巴黎聖母院），是比利時皇室舉行婚禮與國葬的聖地，免費入場參觀華麗的彩繪玻璃與巨型管風琴。
+          </p>
+        </div>
+
+        <!-- 14:30 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">14:30</span>
+            <span class="text-[11px] bg-amber-50 text-amber-700 font-bold px-1.5 py-0.5 rounded">🍫 巧克力大道</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">聖休伯特拱廊街 (Galeries Royales Saint-Hubert)</h4>
+            <a href="https://maps.google.com/?q=Galeries+Royales+Saint-Hubert" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            歐洲最古老華麗的文藝復興式玻璃穹頂長廊，兩側齊聚比利時最負盛名的巧克力工坊：<strong>Neuhaus</strong>（發明夾心巧克力 Praline 的百年創始店）、<strong>Pierre Marcolini</strong>（世界糕點冠軍精品巧克力）與 <strong>Mary</strong>（皇室御用手工巧克力）。
+          </p>
+        </div>
+
+        <!-- 15:20 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">15:20</span>
+            <span class="text-[11px] bg-yellow-50 text-yellow-700 font-bold px-1.5 py-0.5 rounded">🧇 甜點名店</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">Maison Dandoy：列日鬆餅 vs 布魯塞爾鬆餅</h4>
+            <a href="https://maps.google.com/?q=Maison+Dandoy+Grand+Place" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            創業於 1829 年的比利時鬆餅天花板！推薦 3 人點兩種一起分享：
+            <br/>• <strong>Brussels Waffle</strong>：長方形格子、外殼酥脆、質地輕盈如雲朵，灑上細糖粉。
+            <br/>• <strong>Liège Waffle</strong>：不規則圓形、扎實有嚼勁，咬得到高溫焦化的珍珠糖顆粒！
+          </p>
+        </div>
+
+        <!-- 16:00 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">16:00</span>
+            <span class="text-[11px] bg-amber-50 text-amber-800 font-bold px-1.5 py-0.5 rounded">⭐️ 世界文化遺產</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">布魯塞爾大廣場 (Grand-Place) ＋ 市政廳</h4>
+            <a href="https://maps.google.com/?q=Grand-Place+Brussels" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            雨果筆下「世界上最華麗的廣場」。欣賞建於 15 世紀高達 96 公尺的市政廳尖塔，以及周圍滿佈繁複巴洛克雕花與金箔裝飾的中古行會房屋（國王之家、天鵝之家等）。
+          </p>
+        </div>
+
+        <!-- 16:45 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">16:45</span>
+            <span class="text-[11px] text-stone-400 font-medium">地標快拍</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">尿尿小童 (Manneken Pis)</h4>
+            <a href="https://maps.google.com/?q=Manneken+Pis" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            布魯塞爾最著名市民象徵！雕像本體只有 53 公分高，看看萬聖節當天市政廳有沒有為他穿上特製萬聖節服裝。路過拍照即可，不需停留太久。
+          </p>
+        </div>
+
+        <!-- 17:15 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">17:15</span>
+            <span class="text-[11px] text-stone-400 font-medium">順路探訪</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">尿尿小妹 (Jeanneke Pis) ＆ Delirium 巷</h4>
+            <a href="https://maps.google.com/?q=Jeanneke+Pis" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            位於忠實街死巷的鐵欄杆後，對面即是金氏世界紀錄收錄超過 2000 種啤酒的粉紅象 Delirium Café。順路經過看看即可。
+          </p>
+        </div>
+
+        <!-- 17:45 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">17:45</span>
+            <span class="text-[11px] bg-purple-50 text-purple-700 font-bold px-1.5 py-0.5 rounded">🎃 換裝準備</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">回飯店 Check-in ➔ 休息換裝</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            下午逛完先回飯店卸下隨身戰利品、補妝換衣服，準備盛裝迎接今晚的萬聖狂歡！
+          </p>
+        </div>
+
+        <!-- 19:00 WOLF -->
+        <div class="bg-gradient-to-br from-white to-[#FFFBEB] rounded-2xl p-4 border border-[#FDE68A] shadow-soft space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#C2410C] bg-[#FFEDD5] px-2 py-0.5 rounded-md">19:00 - 22:30</span>
+            <span class="text-[11px] bg-[#FEF3C7] text-[#92400E] font-bold px-1.5 py-0.5 rounded">🎃 WOLF Halloween</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">晚餐 ＆ 派對：WOLF Sharing Food Market</h4>
+            <a href="https://maps.google.com/?q=WOLF+Food+Market+Brussels" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            布魯塞爾最潮室內美食市場！當晚有現場 DJ (Afrobeats / Hip-Hop / R&B)、17:00 起免費萬聖節 Face Painting、17 家世界美食攤位與精釀啤酒，直接在這裡邊吃邊玩邊喝酒，免費入場免訂位！
+            <br/><span class="text-stone-400 mt-1 block">備案：如果想吃傳統法蘭德斯大餐，可改去老字號餐酒館 <strong>Fin de Siècle</strong> 品嚐啤酒燉牛肉。</span>
+          </p>
+        </div>
+
+        <!-- 22:30 Night Grand-Place -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#B45309] bg-[#FEF3C7] px-2 py-0.5 rounded-md">22:30</span>
+            <span class="text-[11px] bg-stone-100 text-stone-600 font-bold px-1.5 py-0.5 rounded">🍺 深夜酒吧</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">大廣場金色夜景 ＋ 比利時啤酒巡禮</h4>
+            <a href="https://maps.google.com/?q=Poechenellekelder+Brussels" target="_blank" class="text-[11px] text-[#B45309] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            派對結束後漫步回市中心。夜晚大廣場金碧輝煌的射燈宛如金色宮殿。找間道地酒吧喝比利時啤酒：
+            <br/>• <strong>Poechenellekelder</strong>：尿尿小童旁，滿屋復古木偶，氣氛極度舒適。
+            <br/>• <strong>Delirium Café</strong>：適合想感受萬聖熱鬧人潮與體驗粉紅象啤酒。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Optional Backup Spot Card: Mont des Arts -->
+    <section class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+      <div class="flex items-center justify-between">
+        <h4 class="text-xs font-black text-[#1E293B] uppercase tracking-wider flex items-center gap-1.5">
+          <span>✨</span> <span>彈性備選景點：藝術山 (Mont des Arts)</span>
+        </h4>
+        <span class="text-[10px] bg-stone-100 text-stone-500 font-bold px-1.5 py-0.5 rounded">視體力前往</span>
+      </div>
+      <p class="text-xs text-stone-600 leading-relaxed">
+        位於中央車站旁步道上方，能俯瞰幾何庭園與遠處市政廳尖塔，拍全景極美。若下午進度快可順路走上去拍照；若時間不夠或想先回飯店換裝，留到 Day 3 上午再去即可！
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Daily Expense Modal -->
+  <div id="dailyExpenseModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-sm rounded-3xl p-5 space-y-4 shadow-float animate-fade-in border border-[#E2E8F0]">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-xl bg-[#FEF3C7] text-[#B45309] flex items-center justify-center font-black">💰</span>
+          <h3 class="text-sm font-black text-[#1E293B]">新增今日記帳 (Day 1)</h3>
+        </div>
+        <button onclick="closeDailyExpenseModal()" class="text-stone-400 hover:text-stone-700 text-xl font-bold p-1">✕</button>
+      </div>
+
+      <form id="dailyExpenseForm" onsubmit="submitDailyExpense(event)" class="space-y-3 text-xs">
+        <input type="hidden" id="modalDaySelect" value="day1" />
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">消費項目名稱</label>
+          <input type="text" id="modalTitle" placeholder="例如：Maison Dandoy 鬆餅" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">金額 (€ EUR)</label>
+            <input type="number" step="0.01" id="modalAmount" placeholder="0.00" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none font-bold text-[#B45309]" />
+          </div>
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">消費類別</label>
+            <select id="modalCategory" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+              <option value="food">🍽️ 美食餐飲</option>
+              <option value="transport">🚆 交通車資</option>
+              <option value="tickets">🎟️ 門票票券</option>
+              <option value="shopping">🛍️ 伴手禮購物</option>
+              <option value="hotel">🏨 住宿費用</option>
+              <option value="other">📦 雜項支出</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">付款人</label>
+          <select id="modalPayer" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none bg-white">
+            <!-- Rendered by JS -->
+          </select>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">分攤成員 (預設 3 人均分)</label>
+          <div id="modalSplitCheckboxes" class="flex items-center gap-2">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">備註說明 (選填)</label>
+          <input type="text" id="modalNote" placeholder="例如：萬聖節特調啤酒" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#B45309] focus:outline-none" />
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-[#B45309] hover:bg-[#92400E] text-white font-bold rounded-xl shadow-soft text-xs transition-all active:scale-98 mt-2">
+          確認儲存並分攤
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-4 py-2">
+    <div class="max-w-md mx-auto flex items-center justify-around text-[10px] font-bold text-stone-500">
+      <a href="index.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <svg class="w-5 h-5 text-stone-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        <span>首頁</span>
+      </a>
+      <a href="day1.html" class="flex flex-col items-center gap-1 text-[#B45309]">
+        <span class="text-sm leading-none">🇧🇪</span>
+        <span>Day 1</span>
+      </a>
+      <a href="day2.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🌉</span>
+        <span>Day 2</span>
+      </a>
+      <a href="day3.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚄</span>
+        <span>Day 3</span>
+      </a>
+      <a href="ledger.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
+        <span class="text-sm leading-none">💰</span>
+        <span>帳本</span>
+      </a>
+      <a href="transport_guide.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚆</span>
+        <span>交通</span>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>

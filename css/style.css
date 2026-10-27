@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Belgium & Paris Travel Companion 2026 - European Autumn Design System
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap');
+
+:root {
+  /* Color Palette - European Autumn & Capital Elegance */
+  --bg-washi: #FAF8F5;          /* 溫潤象牙米白紙質 */
+  --bg-card: #FFFFFF;           /* 純白卡片 */
+  --text-primary: #1E293B;      /* 深海軍藍黑 (主字體 Slate-800) */
+  --text-body: #475569;         /* 內文深灰 (Slate-600) */
+  --text-muted: #64748B;        /* 輔助文字 (Slate-500) */
+  
+  /* Belgium & Bruges Accents */
+  --accent-cognac: #B45309;     /* 布魯日紅磚干邑金 */
+  --accent-cognac-light: #FEF3C7;/* 干邑金淺背景 */
+  --accent-wine: #881337;       /* 皇家勃艮第酒紅 */
+  --accent-wine-light: #FFE4E6; /* 酒紅淺背景 */
+  
+  /* Paris & Classic European Accents */
+  --accent-navy: #1E293B;       /* 歐陸深海軍藍 */
+  --accent-navy-light: #F1F5F9; /* 海軍藍淺背景 */
+  --accent-gold: #D97706;       /* 典雅香檳金 */
+  --accent-gold-light: #FFFBEB; /* 香檳金淺背景 */
+  --accent-forest: #1E3A2F;     /* 歐洲林蔭墨綠 */
+  --accent-forest-light: #ECFDF5;
+
+  --border-light: #E2E8F0;      /* 細微邊框 */
+  --border-focus: #B45309;
+
+  --shadow-2xs: 0 1px 3px rgba(30, 41, 59, 0.04);
+  --shadow-soft: 0 4px 20px -2px rgba(30, 41, 59, 0.05);
+  --shadow-card: 0 8px 30px rgba(30, 41, 59, 0.08);
+  --shadow-float: 0 12px 35px rgba(30, 41, 59, 0.12);
+}
+
+/* Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Outfit', 'Noto Sans TC', -apple-system, sans-serif;
+  background-color: var(--bg-washi);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-washi);
+  line-height: 1.6;
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+}
+
+/* Typography Classes */
+.font-serif-title {
+  font-family: 'Playfair Display', 'Noto Serif TC', 'Cinzel', serif;
+}
+
+.font-sans-tc {
+  font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+}
+
+/* Glassmorphism Header & Nav */
+.glass-header {
+  background: rgba(250, 248, 245, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-light);
+}
+
+/* Custom Scrollbar Removal */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Timeline Custom Connectors */
+.timeline-dot {
+  position: relative;
+}
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  bottom: -1.25rem;
+  left: 50%;
+  width: 2px;
+  background: #E2E8F0;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.timeline-dot:last-child::after {
+  display: none;
+}
+
+/* Micro-interaction Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.active-scale:active {
+  transform: scale(0.97);
+}
+
+/* Tag & Badge Tokens */
+.badge-be {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.badge-fr {
+  background-color: #EFF6FF;
+  color: #1E40AF;
+  border: 1px solid #BFDBFE;
+}
+
+.badge-halloween {
+  background-color: #FFEDD5;
+  color: #C2410C;
+  border: 1px solid #FED7AA;
+}

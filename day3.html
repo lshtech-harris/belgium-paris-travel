@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Day 3 布魯塞爾 ➔ 歐洲之星 ➔ 巴黎初見面 | 比利時・巴黎 Travel Companion</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Design Tokens & Style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Trip Data & Core Scripts -->
+  <script src="./tripData.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1E293B] antialiased selection:bg-[#EFF6FF] selection:text-[#1E40AF]">
+
+  <!-- Top Sticky Header -->
+  <header class="sticky top-0 z-40 glass-header px-4 py-3 shadow-sm">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <a href="./index.html" class="p-2 -ml-2 rounded-full hover:bg-stone-200/50 text-[#1E293B] transition-colors" aria-label="返回首頁">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </a>
+        <div>
+          <h1 class="text-base font-black text-[#1E293B] leading-tight font-serif-title">Day 3 行程規劃</h1>
+          <p class="text-[11px] text-stone-500 font-medium">2026.11.02 (週日) • 🇧🇪 布魯塞爾 ➔ 🇫🇷 巴黎</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1 bg-[#EFF6FF] px-2.5 py-1 rounded-full text-[11px] font-bold text-[#1E40AF] border border-[#BFDBFE]">
+        <span>Day 3 / 7</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
+
+    <!-- Day Selector Tabs -->
+    <div class="flex items-center justify-between gap-1.5 bg-white p-1.5 rounded-2xl border border-[#E2E8F0] shadow-soft overflow-x-auto no-scrollbar">
+      <a href="./day1.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 1
+      </a>
+      <a href="./day2.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 2
+      </a>
+      <a href="./day3.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap bg-[#1E40AF] text-white shadow-soft">
+        Day 3
+      </a>
+      <a href="./day4.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 4
+      </a>
+      <a href="./day5.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 5
+      </a>
+      <a href="./day6.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 6
+      </a>
+      <a href="./day7.html" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center whitespace-nowrap text-stone-600 hover:bg-stone-100">
+        Day 7
+      </a>
+    </div>
+
+    <!-- Day 3 Header & Route Card -->
+    <section class="bg-white rounded-3xl p-5 border border-[#E2E8F0] shadow-soft space-y-4 relative overflow-hidden">
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="bg-[#EFF6FF] text-[#1E40AF] font-black px-3 py-1 rounded-xl text-xs">
+            DAY 3 • 2026 / 11 / 02 (日) • 跨國轉場
+          </span>
+          <div class="flex items-center gap-1">
+            <a href="./day2.html" class="p-1 rounded-lg border border-stone-200 hover:bg-stone-100 text-[#1E293B]" title="返回 Day 2">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </a>
+            <a href="./day4.html" class="p-1 rounded-lg border border-stone-200 hover:bg-stone-100 text-[#1E293B]" title="前往 Day 4">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-black text-[#1E293B] font-serif-title leading-tight">
+          布魯塞爾晨光採買 ➔ Eurostar 奔向巴黎 ➔ 塞納河初見
+        </h2>
+
+        <!-- Route Badge -->
+        <div class="inline-flex items-center gap-1.5 bg-[#FAF8F5] px-3 py-1.5 rounded-full text-xs font-semibold text-[#1E40AF] border border-stone-200">
+          <svg class="w-3.5 h-3.5 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <span>伴手禮採買 → Bruxelles-Midi → 12:43 Eurostar → 巴黎北站</span>
+        </div>
+      </div>
+
+      <!-- Top Daily Expense Card (Day 3 今日記帳) -->
+      <div id="daily-ledger-day3" class="bg-[#FAF8F5] p-3.5 rounded-2xl border border-[#E2E8F0] space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-xl bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center text-sm font-black">💰</span>
+            <div>
+              <h3 class="text-xs font-black text-[#1E293B]">Day 3 今日記帳</h3>
+              <p class="text-[10px] text-stone-500 font-medium">跨國交通與巴黎首日 • 實時分帳</p>
+            </div>
+          </div>
+          <button onclick="openDailyExpenseModal('day3')" class="bg-[#1E40AF] hover:bg-[#1E3A8A] text-white font-bold px-3 py-1.5 text-xs rounded-xl shadow-soft transition-all flex items-center gap-1">
+            <span>＋ 記一筆</span>
+          </button>
+        </div>
+
+        <div class="bg-white p-2.5 rounded-xl border border-stone-200/60 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-stone-400 uppercase block">今日總支出</span>
+            <p id="daily-total-day3" class="text-sm font-black text-[#1E40AF]">€0.00 <span class="text-xs text-stone-400 font-normal">(≈ NT$ 0)</span></p>
+          </div>
+          <a href="ledger.html" class="text-xs font-bold text-[#1E293B] hover:underline flex items-center gap-0.5">
+            <span>查看完整帳本 ➔</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential Tips & Reminders -->
+    <section class="bg-[#EFF6FF] rounded-2xl p-4 border border-[#BFDBFE] space-y-2">
+      <div class="flex items-center gap-1.5 text-[#1E40AF] font-black text-xs uppercase tracking-wider">
+        <span>💡</span> <span>跨國移動 ＆ 巴黎安全守則</span>
+      </div>
+      <ul class="text-xs text-[#1E3A8A] space-y-1.5 list-disc list-inside leading-relaxed">
+        <li><strong>Eurostar 閘門關閉時間</strong>：Eurostar 9436 於 12:43 發車，閘門最遲於<strong>發車前 15–20 分鐘停止刷票進站</strong>，務必於 12:15 前抵達 Bruxelles-Midi 車站！</li>
+        <li><strong>巴黎北站 (Gare du Nord) 防盜警戒</strong>：北站人潮眾多且環境複雜，出車廂後後背包請前背，手機勿插在褲子後口袋，遠離任何主動搭話「幫你買票或搬行李」的人。</li>
+        <li><strong>不排原子球塔 (Atomium)</strong>：完全正確的決定！原子球塔在布魯塞爾最北邊，而 Eurostar 在西南邊的南站，上午留在市中心採買巧克力與漫步最充實省心。</li>
+      </ul>
+    </section>
+
+    <!-- Timeline Itinerary Details -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between px-1">
+        <h3 class="text-sm font-black text-[#1E293B] uppercase tracking-wider flex items-center gap-1.5">
+          <span>🕒</span> <span>詳細行程時間軸 (Timeline)</span>
+        </h3>
+        <a href="https://maps.google.com/?q=Bruxelles-Midi" target="_blank" class="text-xs font-bold text-[#1E40AF] hover:underline flex items-center gap-1">
+          <span>開啟南站地圖</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+      <div class="space-y-3.5">
+
+        <!-- 09:00 Breakfast & Stroll -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">09:00</span>
+            <span class="text-[11px] text-stone-400 font-medium">晨間慢活</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">悠閒早餐 ＆ 退房寄放大行李</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            睡飽後享用香濃咖啡與歐式早午餐，辦理退房手續，將 3 人大件行李先寄存在飯店櫃檯。
+          </p>
+        </div>
+
+        <!-- 10:00 Souvenir Shopping -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">10:00</span>
+            <span class="text-[11px] bg-amber-50 text-amber-700 font-bold px-1.5 py-0.5 rounded">🍫 伴手禮巡禮</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">比利時伴手禮 ＆ 皇室巧克力採買</h4>
+            <a href="https://maps.google.com/?q=Galeries+Royales+Saint-Hubert" target="_blank" class="text-[11px] text-[#1E40AF] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            把握最後上午補齊心儀伴手禮：
+            <br/>• <strong>Neuhaus</strong>：經典珠寶盒夾心巧克力 (Ballotin)。
+            <br/>• <strong>Maison Dandoy</strong>：比利時傳統焦糖肉桂脆餅 (Speculoos)。
+            <br/>• <strong>Pierre Marcolini</strong>：精緻果香巧克力與馬卡龍。
+          </p>
+        </div>
+
+        <!-- 10:45 Mont des Arts -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">10:45</span>
+            <span class="text-[11px] bg-amber-50 text-amber-800 font-bold px-1.5 py-0.5 rounded">⭐️ 告別合照點</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">藝術山 (Mont des Arts) 眺望市景</h4>
+            <a href="https://maps.google.com/?q=Mont+des+Arts+Brussels" target="_blank" class="text-[11px] text-[#1E40AF] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            就在中央車站後方台階上方，幾何花園綠籬與城市噴泉相伴，遠眺市政廳 96 公尺尖塔，是告別比利時前拍 3 人合照的最棒景點！
+          </p>
+        </div>
+
+        <!-- 11:45 Luggage Pickup -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">11:45</span>
+            <span class="text-[11px] text-stone-400 font-medium">提領行李</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">回飯店提領行李 ➔ 前往布魯塞爾南站</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            回飯店取回行李，前往布魯塞爾南站 (Bruxelles-Midi / Brussel-Zuid)。可搭火車區間車（車程 4 分鐘）或計程車直接抵達。
+          </p>
+        </div>
+
+        <!-- 12:15 Eurostar Boarding -->
+        <div class="bg-gradient-to-br from-white to-[#EFF6FF] rounded-2xl p-4 border border-[#BFDBFE] shadow-soft space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#DBEAFE] px-2 py-0.5 rounded-md">12:15 - 12:43</span>
+            <span class="text-[11px] bg-[#EFF6FF] text-[#1E40AF] font-bold px-1.5 py-0.5 rounded">🚄 Eurostar 9436</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">歐洲之星刷票進站 ＆ 登車</h4>
+            <a href="https://maps.google.com/?q=Bruxelles-Midi" target="_blank" class="text-[11px] text-[#1E40AF] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            出示手機電子車票 QR Code 刷閘門進站。申根境內無護照檢查，但閘門會在發車前 15 分鐘停止刷進，上車後將大件行李放置於車廂前後行李架上。
+          </p>
+        </div>
+
+        <!-- 12:43 - 14:05 On the train -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">12:43 - 14:05</span>
+            <span class="text-[11px] text-stone-400 font-medium">高速巡航 (82 min)</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">跨越國界：高速直達巴黎北站</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Eurostar 9436 以時速 300 公里奔馳，車程僅 1 小時 22 分鐘，窗外穿越法國北部平原，準時於 14:05 抵達巴黎北站 (Paris Gare du Nord)！
+          </p>
+        </div>
+
+        <!-- 14:30 Paris Hotel Check-in -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">14:30</span>
+            <span class="text-[11px] bg-purple-50 text-purple-700 font-bold px-1.5 py-0.5 rounded">🏨 巴黎入住</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">巴黎北站出發 ➔ 飯店 Check-in</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            抵達巴黎北站後，搭乘計程車/Uber 或地鐵前往巴黎飯店 Check-in，安置行李，洗漱換裝，稍作歇息。
+          </p>
+        </div>
+
+        <!-- 16:30 Seine River Walk -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">16:30</span>
+            <span class="text-[11px] bg-amber-50 text-amber-800 font-bold px-1.5 py-0.5 rounded">🌅 巴黎夕陽</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-[#1E293B]">塞納河畔漫步 ＆ 新橋夕陽</h4>
+            <a href="https://maps.google.com/?q=Pont+Neuf+Paris" target="_blank" class="text-[11px] text-[#1E40AF] font-bold hover:underline">導航 ➔</a>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            初到巴黎的第一個午後！沿著塞納河畔漫步，看著河岸綠色舊書攤 (Bouquinistes)、西堤島與夕陽下的古老石橋，親身感受電影般的花都氛圍。
+          </p>
+        </div>
+
+        <!-- 19:00 Paris Dinner -->
+        <div class="bg-white rounded-2xl p-4 border border-[#E2E8F0] shadow-soft space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-[#1E40AF] bg-[#EFF6FF] px-2 py-0.5 rounded-md">19:00</span>
+            <span class="text-[11px] bg-red-50 text-red-600 font-bold px-1.5 py-0.5 rounded">🍷 法式首夜</span>
+          </div>
+          <h4 class="text-sm font-black text-[#1E293B]">巴黎第一晚：經典法式小酒館 (Bistrot) 晚宴</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            找間熱鬧溫馨的傳統巴黎 Bistrot，享用法式油封鴨 (Confit de Canard)、牛排佐金黃薯條 (Steak Frites)，配上一瓶波爾多紅酒，慶祝巴黎冒險正式展開！
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Daily Expense Modal -->
+  <div id="dailyExpenseModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-sm rounded-3xl p-5 space-y-4 shadow-float animate-fade-in border border-[#E2E8F0]">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-xl bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center font-black">💰</span>
+          <h3 class="text-sm font-black text-[#1E293B]">新增今日記帳 (Day 3)</h3>
+        </div>
+        <button onclick="closeDailyExpenseModal()" class="text-stone-400 hover:text-stone-700 text-xl font-bold p-1">✕</button>
+      </div>
+
+      <form id="dailyExpenseForm" onsubmit="submitDailyExpense(event)" class="space-y-3 text-xs">
+        <input type="hidden" id="modalDaySelect" value="day3" />
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">消費項目名稱</label>
+          <input type="text" id="modalTitle" placeholder="例如：巴黎晚餐油封鴨" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#1E40AF] focus:outline-none" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">金額 (€ EUR)</label>
+            <input type="number" step="0.01" id="modalAmount" placeholder="0.00" required class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#1E40AF] focus:outline-none font-bold text-[#1E40AF]" />
+          </div>
+          <div>
+            <label class="font-bold text-stone-700 block mb-1">消費類別</label>
+            <select id="modalCategory" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#1E40AF] focus:outline-none bg-white">
+              <option value="food">🍽️ 美食餐飲</option>
+              <option value="transport">🚆 交通車資</option>
+              <option value="tickets">🎟️ 門票票券</option>
+              <option value="shopping">🛍️ 伴手禮購物</option>
+              <option value="hotel">🏨 住宿費用</option>
+              <option value="other">📦 雜項支出</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">付款人</label>
+          <select id="modalPayer" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#1E40AF] focus:outline-none bg-white">
+            <!-- Rendered by JS -->
+          </select>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">分攤成員 (預設 3 人均分)</label>
+          <div id="modalSplitCheckboxes" class="flex items-center gap-2">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div>
+          <label class="font-bold text-stone-700 block mb-1">備註說明 (選填)</label>
+          <input type="text" id="modalNote" placeholder="例如：含佐餐紅酒" class="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-[#1E40AF] focus:outline-none" />
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-[#1E40AF] hover:bg-[#1E3A8A] text-white font-bold rounded-xl shadow-soft text-xs transition-all active:scale-98 mt-2">
+          確認儲存並分攤
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 glass-nav px-4 py-2">
+    <div class="max-w-md mx-auto flex items-center justify-around text-[10px] font-bold text-stone-500">
+      <a href="index.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <svg class="w-5 h-5 text-stone-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        <span>首頁</span>
+      </a>
+      <a href="day1.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🇧🇪</span>
+        <span>Day 1</span>
+      </a>
+      <a href="day2.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🌉</span>
+        <span>Day 2</span>
+      </a>
+      <a href="day3.html" class="flex flex-col items-center gap-1 text-[#1E40AF]">
+        <span class="text-sm leading-none">🚄</span>
+        <span>Day 3</span>
+      </a>
+      <a href="ledger.html" class="flex flex-col items-center gap-1 hover:text-[#B45309] transition-colors">
+        <span class="text-sm leading-none">💰</span>
+        <span>帳本</span>
+      </a>
+      <a href="transport_guide.html" class="flex flex-col items-center gap-1 hover:text-[#1E293B] transition-colors">
+        <span class="text-sm leading-none">🚆</span>
+        <span>交通</span>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>
