@@ -193,25 +193,26 @@ window.dailyItineraries = [
     city: "巴黎 Paris",
     badge: "🏛️ 經典巴黎 ＆ 羅浮宮週三夜場",
     country: "FR",
-    title: "凱旋門登頂 ➔ 香榭麗舍逛街 ➔ 橘園睡蓮 ➔ 杜樂麗 ➔ 羅浮宮週三夜場 (至 21:00)",
-    route: "凱旋門 → 香榭麗舍大道 (Longchamp/購物) → 午餐 → 橘園美術館 → 杜樂麗花園 → 羅浮宮金字塔夕景 → 18:00 羅浮宮夜場參觀",
+    title: "凱旋門登頂 ➔ 香榭麗舍逛街 ➔ 橘園睡蓮 (14:30) ➔ 杜樂麗 ➔ 羅浮宮週三夜場 (19:00-21:00)",
+    route: "凱旋門 → 香榭麗舍大道 (Longchamp/購物) → 午餐 → 橘園美術館 (14:30) → 杜樂麗花園/皇家宮殿 → 晚餐充電 → 19:00 羅浮宮夜場",
     coverImage: "https://images.unsplash.com/photo-1509439581779-6298f75bf6e5?q=80&w=1200&auto=format&fit=crop",
-    brief: "今日是巴黎最富代表性的一天！上午自凱旋門出發，沿著香榭麗舍林蔭大道漫步逛街；下午探訪橘園美術館沉浸於莫內的《睡蓮》，穿過杜樂麗花園。特別善用「週三延長開放至 21:00」的珍貴優勢，傍晚避開尖峰人潮進羅浮宮夜場，夜晚走出金字塔欣賞金色夜景！",
+    brief: "今日是巴黎最富代表性的一天！上午自凱旋門出發，沿著香榭麗舍林蔭大道漫步逛街；下午 14:30 預約進橘園美術館沉浸於莫內的《睡蓮》，穿過杜樂麗花園與皇家宮殿漫步拍照，傍晚在羅浮宮旁享用法式晚餐儲備體力；19:00 依約進羅浮宮夜場欣賞三寶與奢華套房，晚間走出金字塔欣賞金色夜景！",
     reminders: [
-      "⭐ 羅浮宮特別安排在星期三，因為週三、週五延長開放至 21:00，白天可以盡情逛街，完全不犧牲白天採光！",
-      "羅浮宮聚焦三寶（蒙娜麗莎、勝利女神、維納斯）＋ 拿破崙三世套房，控制在 2.5–3 小時最舒適，避免審美疲勞。",
-      "橘園美術館 (Musée de l’Orangerie) 規模小巧精緻，抓 1–1.5 小時欣賞橢圓展廳內的巨幅莫內睡蓮剛剛好。"
+      "⭐ 橘園美術館已預約 11/4 14:30，請提前 15 分鐘於 14:15 抵達入口掃碼排隊。",
+      "⭐ 羅浮宮已預約 11/4 19:00（週三延長夜場至 21:00）。館內禁止飲食，請務必在 17:15–18:30 先在羅浮宮周邊吃飽喝足，才有體力走 2 小時！",
+      "羅浮宮夜場精準聚焦三寶（蒙娜麗莎、勝利女神、維納斯）＋ 拿破崙三世奢華套房，掌握動線避免審美疲勞。"
     ],
     mapUrl: "https://maps.google.com/?q=Louvre+Museum+Paris",
     timeline: [
       { time: "09:00", title: "巴黎咖啡館早餐", desc: "享用熱拿鐵佐酥脆法式牛角可頌", icon: "sun" },
       { time: "09:30 - 10:30", title: "巴黎凱旋門 (Arc de Triomphe)", desc: "登上頂樓觀景台俯瞰星形廣場 12 條放射狀大道（若不登頂下方拍照約 20-30 分鐘）", type: "spot", targetId: "arc-de-triomphe" },
       { time: "10:30 - 12:30", title: "香榭麗舍大道漫步 ＆ 精品購物 🛍️", desc: "沿林蔭大道慢慢走、逛旗艦店。Longchamp 可在此或後面百貨比較款式", type: "spot", targetId: "champs-elysees" },
-      { time: "12:30", title: "法式午餐時光", desc: "大道周邊小巷尋訪特色小餐館享用法式烘餅或三明治", type: "food", targetId: "lunch-day5" },
-      { time: "14:00 - 15:30", title: "橘園美術館 (Musée de l'Orangerie) 🎨", desc: "欣賞莫內曠世巨作《睡蓮 (Water Lilies)》連作，全景橢圓天窗展廳極度震撼", type: "spot", targetId: "orangerie" },
-      { time: "15:30 - 17:00", title: "杜樂麗花園 ➔ 協和廣場 ➔ 羅浮宮外庭夕拍", desc: "漫步杜樂麗花園綠色鐵椅、協和廣場，約 17:00 天黑前拍羅浮宮金字塔與方形中庭 (Cour Carrée)", type: "spot", targetId: "tuileries-pyramid" },
-      { time: "17:00 - 18:00", title: "晚餐 / 咖啡館休息充電", desc: "羅浮宮周邊享用輕食咖啡，儲備體力迎接重點夜場", type: "food", targetId: "dinner-pre-louvre" },
-      { time: "18:00 - 21:00", title: "羅浮宮博物館 (Musée du Louvre) 週三夜場 ⭐️", desc: "週三延長開放至 21:00！精準走訪蒙娜麗莎、勝利女神、米洛維納斯與拿破崙三世奢華套房", type: "spot", targetId: "louvre-night" },
+      { time: "12:30 - 14:00", title: "法式午餐時光", desc: "大道周邊小巷尋訪特色小餐館享用法式烘餅或三明治", type: "food", targetId: "lunch-day5" },
+      { time: "14:30 - 16:00", title: "橘園美術館 (Musée de l'Orangerie) 🎨", desc: "已預約 14:30 入場！欣賞莫內曠世巨作《睡蓮 (Water Lilies)》連作，全景橢圓天窗展廳極度震撼", type: "spot", targetId: "orangerie" },
+      { time: "16:00 - 17:15", title: "杜樂麗花園 ＆ 皇家宮殿黑白柱漫步", desc: "漫步杜樂麗花園綠色鐵椅、協和廣場，延伸至 Palais-Royal 拍經典黑白條紋圓柱", type: "spot", targetId: "tuileries-pyramid" },
+      { time: "17:15 - 18:30", title: "羅浮宮前悠閒晚餐充電 🍽️", desc: "羅浮宮內禁止飲食且將走 2 小時，此時段於周邊法式餐館或咖啡館坐下來悠閒吃晚餐補充體力", type: "food", targetId: "dinner-pre-louvre" },
+      { time: "18:30 - 19:00", title: "羅浮宮金字塔黃昏外庭合照 📸", desc: "暮色籠罩下的拿破崙中庭，與貝聿銘玻璃金字塔合照，準備 19:00 預約進場", type: "spot", targetId: "pyramid-dusk" },
+      { time: "19:00 - 21:00", title: "羅浮宮博物館 (Musée du Louvre) 週三夜場 ⭐️", desc: "已預約 19:00 入場（週三開放至 21:00）！精準走訪蒙娜麗莎、勝利女神、米洛維納斯與拿破崙三世奢華套房", type: "spot", targetId: "louvre-night" },
       { time: "21:00 後", title: "羅浮宮金字塔金色夜景 🌙", desc: "走出館外，貝聿銘玻璃金字塔在黑夜中亮起金黃色幾何光芒，美不勝收", type: "spot", targetId: "pyramid-night" }
     ]
   },
@@ -220,26 +221,29 @@ window.dailyItineraries = [
     date: "2026.11.05",
     weekday: "週四",
     city: "巴黎 Paris",
-    badge: "🎨 文藝左岸 ＆ 奧賽週四夜場 ＆ 塞納河遊船",
+    badge: "🎨 文藝左岸 ＆ 奧賽週四夜場 (17:00) ＆ Bateaux Parisiens 鐵塔遊船 (20:00)",
     country: "FR",
-    title: "聖母院 ➔ 聖禮拜堂彩繪玻璃 ➔ 左岸漫步 ➔ 奧賽夜場 (至 21:45) ➔ 塞納河夜景遊船",
-    route: "巴黎聖母院 → 聖禮拜堂 (10:00預約) → 拉丁區/聖日耳曼散步 (午餐/咖啡) → 奧賽美術館 (16:30夜場) → 19:30 塞納河遊船 (賞鐵塔亮燈夜景)",
+    title: "聖母院 ➔ 聖禮拜堂彩繪玻璃 ➔ 左岸漫步 ➔ 奧賽夜場 (17:00) ➔ Bateaux Parisiens 塞納河鐵塔遊船",
+    route: "巴黎聖母院 → 聖禮拜堂 (10:00預約) → 拉丁區/聖日耳曼散步 (午餐) → 貴婦百貨 → 奧賽美術館 (17:00夜場) → RER C 直達鐵塔 → 20:00 Bateaux Parisiens 3 號碼頭遊船",
     coverImage: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1200&auto=format&fit=crop",
-    brief: "今日是巴黎最富文藝氣質的一天。上午走訪西堤島兩大地標：瞻仰聖母院外觀，並在 10:00 晨光最美時刻走進聖禮拜堂，仰望 15 米高震撼彩繪玻璃窗。下午漫步拉丁區與聖日耳曼左岸咖啡館；傍晚利用「週四奧賽美術館開到 21:45」欣賞梵谷與莫內，晚間搭乘塞納河遊船，在河面遠眺艾菲爾鐵塔整點金光閃爍！",
+    brief: "今日是巴黎最富文藝氣質的一天。上午走訪西堤島兩大地標：瞻仰聖母院外觀，並在 10:00 晨光最美時刻走進聖禮拜堂，仰望 15 米高震撼彩繪玻璃窗。下午漫步拉丁區與貴婦百貨；傍晚 17:00 預約進奧賽美術館欣賞梵谷與莫內，隨後搭 RER C 直達艾菲爾鐵塔下 Port de la Bourdonnais 3 號碼頭，搭乘 20:00 Bateaux Parisiens 純觀光遊船，一邊出航一邊仰望鐵塔整點 5 分鐘金光閃爍！",
     reminders: [
       "⭐ 聖禮拜堂 (Sainte-Chapelle) 白天光線穿透彩繪玻璃最美，務必提前預約上午 10:00 左右時段！",
-      "⭐ 奧賽美術館 (Musée d'Orsay) 週四特別延長至 21:45，安排在下午 16:30 後進場，人潮更少、動線更舒適。",
-      "塞納河遊船強烈建議排在晚上（19:30 班次），11 月天黑後沿途欣賞塞納河兩岸橋樑打光與艾菲爾鐵塔整點閃燈！"
+      "⭐ 奧賽美術館已預約 11/5 17:00（週四延長開放至 21:45），請於 16:45 抵達專屬預約通道。",
+      "⭐ 塞納河遊船採用 Bateaux Parisiens 純觀光 1 小時方案（免預約時段持憑證掃碼進站），登船地點在艾菲爾鐵塔腳下 Port de la Bourdonnais 3 號碼頭（請勿跑去蒼蠅船 Bateaux-Mouches）！",
+      "交通建議：奧賽參觀完後，直接在館門口 Gare du Musée d'Orsay 搭乘 RER C 線直達 Champ de Mars - Tour Eiffel（車程 8 分鐘），步行 6 分鐘直達 3 號碼頭，搭乘 20:00 班次可完美看到鐵塔整點閃燈！"
     ],
     mapUrl: "https://maps.google.com/?q=Sainte-Chapelle+Paris",
     timeline: [
       { time: "09:00", title: "巴黎聖母院 (Notre-Dame)", desc: "西堤島核心，瞻仰哥德式飛扶壁與雙塔建築風采，感受歷史沉澱", type: "spot", targetId: "notre-dame" },
       { time: "10:00", title: "聖禮拜堂 (Sainte-Chapelle) ⭐️", desc: "預約 10:00 入場！陽光穿透 15 扇高達 15 米的 13 世紀瑰麗彩繪玻璃窗，宛如置身巨型珠寶盒", type: "spot", targetId: "sainte-chapelle" },
-      { time: "11:00 - 13:30", title: "漫步左岸：拉丁區 ＆ 聖日耳曼德佩", desc: "穿過西堤島抵達左岸，探訪莎士比亞書店、漫步老街，在街角咖啡館享用悠閒午餐", type: "food", targetId: "left-bank-lunch" },
-      { time: "14:00 - 16:00", title: "左岸自由漫步 / Le Bon Marché 百貨", desc: "走訪世界最古老精品百貨貴婦百貨 Le Bon Marché，或在聖日耳曼街區逛獨立選品店", type: "spot", targetId: "bon-marche" },
-      { time: "16:30 - 19:00", title: "奧賽美術館 (Musée d'Orsay) 週四夜場 ⭐️", desc: "週四延長至 21:45！由舊火車站改建，欣賞莫內《睡蓮》、梵谷自畫像、雷諾瓦與大鐘剪影拍照", type: "spot", targetId: "orsay-night" },
-      { time: "19:30 - 20:30", title: "塞納河夜景遊船 (Seine River Cruise) ⭐️", desc: "搭乘 Bateaux-Mouches 塞納河遊船，從水上仰望聖母院、羅浮宮與艾菲爾鐵塔整點金色閃燈 (20:00)！", type: "spot", targetId: "seine-night-cruise" },
-      { time: "21:00", title: "左岸小酒館慶祝晚餐", desc: "品嚐法式洋蔥湯、香煎鴨胸或法式生牛肉塔塔", type: "food", targetId: "left-bank-dinner" }
+      { time: "11:00 - 13:30", title: "漫步左岸：莎士比亞書店 ＆ 聖日耳曼德佩", desc: "穿過西堤島抵達左岸，探訪莎士比亞書店、漫步老街，在街角咖啡館享用悠閒午餐", type: "food", targetId: "left-bank-lunch" },
+      { time: "13:30 - 16:15", title: "左岸自由漫步 / Le Bon Marché 百貨", desc: "走訪世界最古老精品百貨貴婦百貨 Le Bon Marché，或在聖日耳曼街區逛獨立選品店", type: "spot", targetId: "bon-marche" },
+      { time: "16:15 - 16:45", title: "沿塞納河畔漫步 ➔ 前往奧賽美術館", desc: "穿過聖日耳曼林蔭街區，沿著左岸塞納河畔悠閒走向奧賽美術館，準備於 16:45 抵達專屬通道", icon: "walk" },
+      { time: "17:00 - 19:15", title: "奧賽美術館 (Musée d'Orsay) 週四夜場 ⭐️", desc: "已預約 17:00 入場（週四延長至 21:45）！欣賞莫內《睡蓮》、梵谷自畫像、雷諾瓦與大鐘剪影拍照", type: "spot", targetId: "orsay-night" },
+      { time: "19:15 - 19:45", title: "奧賽搭 RER C 直奔艾菲爾鐵塔 3 號碼頭", desc: "奧賽站搭 RER C 直達 Champ de Mars - Tour Eiffel（8 分鐘），步行 6 分鐘直達 Port de la Bourdonnais", icon: "train" },
+      { time: "20:00 - 21:00", title: "Bateaux Parisiens 塞納河純觀光遊船 ⭐️", desc: "持憑證於艾菲爾鐵塔腳下 3 號碼頭登船！20:00 準時啟航，仰望鐵塔整點 5 分鐘金光閃爍，1 小時遊河飽覽塞納河夜景", type: "spot", targetId: "seine-night-cruise" },
+      { time: "21:15", title: "鐵塔周邊或左岸慶祝晚餐", desc: "品嚐法式洋蔥湯、香煎鴨胸或法式生牛肉塔塔，慶祝文藝充實的一天", type: "food", targetId: "left-bank-dinner" }
     ]
   },
   {
