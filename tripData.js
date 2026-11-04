@@ -221,19 +221,19 @@ window.dailyItineraries = [
     date: "2026.11.05",
     weekday: "週四",
     city: "巴黎 Paris",
-    badge: "🎨 文藝左岸 ＆ 奧賽週四夜場 (17:00) ＆ Bateaux Parisiens 鐵塔遊船 (20:00)",
+    badge: "🎨 文藝左岸 ＆ 奧賽夜場 ＆ 艾菲爾鐵塔 ＆ 遊船",
     country: "FR",
-    title: "聖母院 ➔ 聖禮拜堂彩繪玻璃 ➔ 左岸漫步 ➔ 奧賽夜場 (17:00) ➔ Bateaux Parisiens 塞納河鐵塔遊船",
-    route: "巴黎聖母院 → 聖禮拜堂 (10:00預約) → 拉丁區/聖日耳曼散步 (午餐) → 貴婦百貨 → 奧賽美術館 (17:00夜場) → RER C 直達鐵塔 → 20:00 Bateaux Parisiens 3 號碼頭遊船",
+    title: "聖母院 ➔ 聖禮拜堂彩繪玻璃 ➔ 奧賽夜場 (17:00) ➔ 艾菲爾鐵塔 ＆ 塞納河遊船",
+    route: "巴黎聖母院 → 聖禮拜堂 (10:00預約) → 左岸漫步 (午餐) → 貴婦百貨 → 奧賽美術館 (17:00夜場) → RER C 直達鐵塔 → 20:00 遊船 → 21:00 夏樂宮夜景",
     coverImage: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1200&auto=format&fit=crop",
-    brief: "今日是巴黎最富文藝氣質的一天。上午走訪西堤島兩大地標：瞻仰聖母院外觀，並在 10:00 晨光最美時刻走進聖禮拜堂，仰望 15 米高震撼彩繪玻璃窗。下午漫步拉丁區與貴婦百貨；傍晚 17:00 預約進奧賽美術館欣賞梵谷與莫內，隨後搭 RER C 直達艾菲爾鐵塔下 Port de la Bourdonnais 3 號碼頭，搭乘 20:00 Bateaux Parisiens 純觀光遊船，一邊出航一邊仰望鐵塔整點 5 分鐘金光閃爍！",
+    brief: "今日是巴黎最富文藝與浪漫氣息的一天！上午走訪西堤島兩大地標：瞻仰聖母院外觀，並在 10:00 晨光最美時刻走進聖禮拜堂，仰望 15 米高震撼彩繪玻璃窗。下午漫步拉丁區與貴婦百貨；傍晚 17:00 預約進奧賽美術館欣賞梵谷與莫內，隨後搭 RER C 直達艾菲爾鐵塔腳下搭乘 20:00 Bateaux Parisiens 遊船賞整點閃燈，下船後走上夏樂宮平台拍攝最經典的巴黎鐵塔金色夜景！",
     reminders: [
       "⭐ 聖禮拜堂 (Sainte-Chapelle) 白天光線穿透彩繪玻璃最美，務必提前預約上午 10:00 左右時段！",
       "⭐ 奧賽美術館已預約 11/5 17:00（週四延長開放至 21:45），請於 16:45 抵達專屬預約通道。",
       "⭐ 塞納河遊船採用 Bateaux Parisiens 純觀光 1 小時方案（免預約時段持憑證掃碼進站），登船地點在艾菲爾鐵塔腳下 Port de la Bourdonnais 3 號碼頭（請勿跑去蒼蠅船 Bateaux-Mouches）！",
-      "交通建議：奧賽參觀完後，直接在館門口 Gare du Musée d'Orsay 搭乘 RER C 線直達 Champ de Mars - Tour Eiffel（車程 8 分鐘），步行 6 分鐘直達 3 號碼頭，搭乘 20:00 班次可完美看到鐵塔整點閃燈！"
+      "⭐ 巴黎鐵塔夜拍巡禮：下船後沿耶拿橋漫步，先拍旋轉木馬暖光配鐵塔，再走上夏樂宮 (Trocadéro) 居高臨下拍正面全景，還能看到 22:00 的 5 分鐘鑽石閃爍秀！"
     ],
-    mapUrl: "https://maps.google.com/?q=Sainte-Chapelle+Paris",
+    mapUrl: "https://maps.google.com/?q=Eiffel+Tower+Paris",
     timeline: [
       { time: "09:00", title: "巴黎聖母院 (Notre-Dame)", desc: "西堤島核心，瞻仰哥德式飛扶壁與雙塔建築風采，感受歷史沉澱", type: "spot", targetId: "notre-dame" },
       { time: "10:00", title: "聖禮拜堂 (Sainte-Chapelle) ⭐️", desc: "預約 10:00 入場！陽光穿透 15 扇高達 15 米的 13 世紀瑰麗彩繪玻璃窗，宛如置身巨型珠寶盒", type: "spot", targetId: "sainte-chapelle" },
@@ -243,7 +243,8 @@ window.dailyItineraries = [
       { time: "17:00 - 19:15", title: "奧賽美術館 (Musée d'Orsay) 週四夜場 ⭐️", desc: "已預約 17:00 入場（週四延長至 21:45）！欣賞莫內《睡蓮》、梵谷自畫像、雷諾瓦與大鐘剪影拍照", type: "spot", targetId: "orsay-night" },
       { time: "19:15 - 19:45", title: "奧賽搭 RER C 直奔艾菲爾鐵塔 3 號碼頭", desc: "奧賽站搭 RER C 直達 Champ de Mars - Tour Eiffel（8 分鐘），步行 6 分鐘直達 Port de la Bourdonnais", icon: "train" },
       { time: "20:00 - 21:00", title: "Bateaux Parisiens 塞納河純觀光遊船 ⭐️", desc: "持憑證於艾菲爾鐵塔腳下 3 號碼頭登船！20:00 準時啟航，仰望鐵塔整點 5 分鐘金光閃爍，1 小時遊河飽覽塞納河夜景", type: "spot", targetId: "seine-night-cruise" },
-      { time: "21:15", title: "鐵塔周邊或左岸慶祝晚餐", desc: "品嚐法式洋蔥湯、香煎鴨胸或法式生牛肉塔塔，慶祝文藝充實的一天", type: "food", targetId: "left-bank-dinner" }
+      { time: "21:00 - 21:50", title: "艾菲爾鐵塔 ＆ 夏樂宮觀景台夜拍 ⭐️", desc: "下船漫步耶拿橋拍復古旋轉木馬，登上夏樂宮 (Trocadéro) 拍正面無死角明信片全身照，看 22:00 閃燈", type: "spot", targetId: "eiffel-tower" },
+      { time: "22:00", title: "鐵塔景觀 / 左岸小酒館慶祝晚宴", desc: "品嚐法式洋蔥湯、香煎鴨胸或法式生牛肉塔塔，慶祝文藝充實的一天", type: "food", targetId: "left-bank-dinner" }
     ]
   },
   {
