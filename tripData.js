@@ -191,16 +191,16 @@ window.dailyItineraries = [
     date: "2026.11.04",
     weekday: "週三",
     city: "巴黎 Paris",
-    badge: "🏛️ 春天精品・Zara・橘園・Bershka・羅浮宮",
+    badge: "🏛️ 春天精品・Le 37m2・橘園・Stohrer・羅浮宮・Pho Mui",
     country: "FR",
-    title: "凱旋門 ➔ 春天百貨 (Celine/Prada/Zara) ➔ 14:30 橘園 ➔ Bershka ➔ 19:00 羅浮宮週三夜場",
-    route: "凱旋門 → RER A 4分鐘 → 春天百貨/Zara旗艦店 → 14:30 橘園 → 杜樂麗/Bershka → 晚餐 → 19:00 羅浮宮夜場",
+    title: "凱旋門 ➔ 春天百貨 (Celine/Prada/Zara) ➔ Le 37m2 ➔ 14:30 橘園 ➔ Stohrer ➔ 19:00 羅浮宮夜場 ➔ Pho Mui 宵夜",
+    route: "凱旋門 → RER A 4分鐘 → 春天百貨/Zara → 13:00 Le 37m2 → 14:30 橘園 → Bershka/皇家宮殿 → 16:45 Stohrer → 晚餐 → 19:00 羅浮宮夜場 → 21:20 14號線直達 Pho Mui 宵夜",
     coverImage: "https://images.unsplash.com/photo-1509439581779-6298f75bf6e5?q=80&w=1200&auto=format&fit=crop",
-    brief: "今日是巴黎精品購物與經典藝術最豐富的一天！上午自凱旋門出發，搭 RER A 僅 4 分鐘直達春天百貨，直奔 Celine 墨鏡與 Prada 錢包專櫃，並在對面 Zara 旗艦店採買歐洲美衣，全館合併退稅；下午 14:30 預約進橘園沉浸於莫內《睡蓮》，漫步杜樂麗並逛 Rue de Rivoli 上的 Bershka 旗艦店與皇家宮殿；傍晚吃飽晚餐充電後，19:00 依約進羅浮宮夜場欣賞三寶與奢華套房！",
+    brief: "今日是巴黎精品購物、經典藝術與排隊名店交織的最精彩一日！上午凱旋門登頂後搭 RER A 僅 4 分鐘直達春天百貨，直奔 Celine 與 Prada 專櫃並逛 Zara 旗艦店，全館統一辦理退稅；中午漫步至聖安娜街品嚐朋朋激推 Le 37m2 酥脆鹽酥雞便當與珍奶；下午 14:30 依約進橘園欣賞莫內《睡蓮》，逛 Rivoli 街 Bershka 與皇家宮殿黑白柱；傍晚探訪巴黎最古老 300 年老舖 Stohrer 品嚐朗姆巴巴與千層派；吃飽晚餐後 19:00 漫步羅浮宮夜場三寶，閉館後由 Pyramides 搭 14 號線 11 分鐘直達 13 區唐人街享用 Pho Mui 滾燙特別牛河宵夜！",
     reminders: [
       "⭐ 春天百貨 Celine ＆ Prada 專櫃貨量充足，一線精品雖不適用 95 折券，但全館可合併累計退稅（約 12%）；香水美妝服飾享 95 折！",
-      "⭐ 快時尚逛街安排：Zara 奧斯曼旗艦店就在春天百貨正對面；Bershka 旗艦店位在下午橘園旁的 Rue de Rivoli，順路不回頭！",
-      "⭐ 橘園已預約 14:30、羅浮宮夜場已預約 19:00。17:15–18:30 先在羅浮宮旁吃飽晚餐，才有體力走 2 小時夜場！"
+      "⭐ 美食打卡亮點：午餐 Le 37m2（聖安娜街台式鹽酥雞便當＋珍奶）、午茶 Stohrer（1730年最古老糕點舖發明朗姆巴巴）、宵夜 Pho Mui（地鐵14號線直達13區唐人街熱牛河）！",
+      "⭐ 橘園已預約 14:30、羅浮宮夜場已預約 19:00。17:30–18:30 先在羅浮宮旁吃飽晚餐，才有體力走 2 小時夜場！"
     ],
     mapUrl: "https://maps.google.com/?q=Printemps+Haussmann+Paris",
     timeline: [
@@ -208,14 +208,16 @@ window.dailyItineraries = [
       { time: "09:30 - 10:30", title: "巴黎凱旋門 (Arc de Triomphe)", desc: "登上頂樓觀景台俯瞰星形廣場 12 條放射狀大道（若不登頂下方拍照約 20-30 分鐘）", type: "spot", targetId: "arc-de-triomphe" },
       { time: "10:30 - 10:45", title: "凱旋門搭 RER A 直達春天百貨", desc: "Charles de Gaulle 站搭 RER A 線僅 1 站（4 分鐘）直達 Auber 站，出站即達春天百貨", icon: "train" },
       { time: "10:45 - 13:00", title: "春天百貨 ＆ Zara 奧斯曼旗艦店 🛍️", desc: "春天百貨看 Celine 墨鏡、Prada 錢包與 Longchamp，全館合併辦退稅 (12%)；對面逛 4 層樓 Zara 旗艦店", type: "spot", targetId: "printemps-shopping" },
-      { time: "13:00 - 14:00", title: "歌劇院 / 瑪德蓮商圈法式午餐 🍽️", desc: "在春天百貨或歌劇院周邊挑選精緻法式餐館或咖啡館坐下享用午餐與甜點充電", type: "food", targetId: "lunch-day5" },
+      { time: "13:00 - 14:00", title: "午餐時光：Le 37m2 台灣經典便當 ＆ 珍奶 🍱", desc: "【朋朋激推】聖安娜街人氣名店！酥脆多汁鹽酥雞便當、炸排骨飯配黑糖珍奶，家鄉味滿血復活", type: "food", targetId: "le-37m2" },
       { time: "14:00 - 14:25", title: "漫步前往橘園美術館", desc: "沿皇家大道 (Rue Royale) 經瑪德蓮教堂至協和廣場，漫步 15 分鐘至杜樂麗西南角", icon: "walk" },
-      { time: "14:30 - 16:00", title: "橘園美術館 (Musée de l'Orangerie) 🎨", desc: "已預約 14:30 入場！欣賞莫內曠世巨作《睡蓮 (Water Lilies)》連作，全景橢圓天窗展廳極度震撼", type: "spot", targetId: "orangerie" },
-      { time: "16:00 - 17:15", title: "Bershka Rivoli 旗艦店 ＆ 皇家宮殿 🛍️", desc: "沿杜樂麗花園旁的 Rue de Rivoli 逛全巴黎最大 Bershka 旗艦店，順遊皇家宮殿拍黑白條紋柱", type: "spot", targetId: "bershka-rivoli" },
-      { time: "17:15 - 18:30", title: "羅浮宮前悠閒晚餐充電 🍽️", desc: "羅浮宮內禁止飲食且將走 2 小時，此時段於周邊法式餐館或咖啡館坐下來悠閒吃晚餐補充體力", type: "food", targetId: "dinner-pre-louvre" },
+      { time: "14:30 - 15:45", title: "橘園美術館 (Musée de l'Orangerie) 🎨", desc: "已預約 14:30 入場！欣賞莫內曠世巨作《睡蓮 (Water Lilies)》連作，全景橢圓天窗展廳極度震撼", type: "spot", targetId: "orangerie" },
+      { time: "15:45 - 16:45", title: "Bershka Rivoli 旗艦店 ＆ 皇家宮殿 🛍️", desc: "沿杜樂麗花園旁 Rue de Rivoli 逛全巴黎最大 Bershka 旗艦店，順遊皇家宮殿拍黑白條紋柱", type: "spot", targetId: "bershka-rivoli" },
+      { time: "16:45 - 17:30", title: "Stohrer 巴黎最古老烘焙糕點舖 (1730) 👑", desc: "【朋朋激推】路易十五御廚創立 300 年老舖！發明名作朗姆巴巴 (Baba au Rhum)、愛之井與千層派", type: "food", targetId: "stohrer-pastry" },
+      { time: "17:30 - 18:30", title: "羅浮宮前悠閒晚餐充電 🍽️", desc: "羅浮宮內禁止飲食且將走 2 小時，此時段於周邊法式餐館或咖啡館坐下來悠閒吃晚餐補充體力", type: "food", targetId: "dinner-pre-louvre" },
       { time: "18:30 - 19:00", title: "羅浮宮金字塔黃昏外庭合照 📸", desc: "暮色籠罩下的拿破崙中庭，與貝聿銘玻璃金字塔合照，準備 19:00 預約進場", type: "spot", targetId: "pyramid-dusk" },
       { time: "19:00 - 21:00", title: "羅浮宮博物館 (Musée du Louvre) 週三夜場 ⭐️", desc: "已預約 19:00 入場（週三開放至 21:00）！精準走訪蒙娜麗莎、勝利女神、米洛維納斯與拿破崙三世奢華套房", type: "spot", targetId: "louvre-night" },
-      { time: "21:00 後", title: "羅浮宮金字塔金色夜景 🌙", desc: "走出館外，貝聿銘玻璃金字塔在黑夜中亮起金黃色幾何光芒，美不勝收", type: "spot", targetId: "pyramid-night" }
+      { time: "21:00 - 21:20", title: "羅浮宮金字塔金色夜景 🌙", desc: "走出館外，貝聿銘玻璃金字塔在黑夜中亮起金黃色幾何光芒，美不勝收", type: "spot", targetId: "pyramid-night" },
+      { time: "21:20 - 22:45", title: "深夜宵夜：Pho Mui 潮州越式牛肉河粉 🍜", desc: "【朋朋激推】Pyramides 搭地鐵 14 號線僅 11 分鐘直達 Olympiades！滾燙清甜大骨湯特別牛河與春捲，暖胃治癒到極點", type: "food", targetId: "pho-mui" }
     ]
   },
   {
@@ -223,30 +225,33 @@ window.dailyItineraries = [
     date: "2026.11.05",
     weekday: "週四",
     city: "巴黎 Paris",
-    badge: "🎨 文藝左岸 ＆ 奧賽夜場 ＆ 艾菲爾鐵塔 ＆ 遊船",
+    badge: "🎨 文藝左岸 ＆ 奧賽夜場 ＆ 艾菲爾鐵塔 ＆ 遊船 ＆ 經典美食",
     country: "FR",
-    title: "聖母院 ➔ 聖禮拜堂彩繪玻璃 ➔ 奧賽夜場 (17:00) ➔ 艾菲爾鐵塔 ＆ 塞納河遊船",
-    route: "巴黎聖母院 → 聖禮拜堂 (10:00預約) → 左岸漫步 (午餐) → 貴婦百貨 → 奧賽美術館 (17:00夜場) → RER C 直達鐵塔 → 20:00 遊船 → 21:00 夏樂宮夜景",
+    title: "冠軍可頌 ➔ 聖母院 ➔ 聖禮拜堂 ➔ Bouillon 午餐 ➔ Pierre Hermé ➔ 奧賽夜場 ➔ 鐵塔遊船 ➔ Carette 宵夜",
+    route: "08:30 La Maison d'Isabelle 可頌 → 聖母院 → 10:00 聖禮拜堂 → 11:30 Bouillon Chartier → 莎士比亞書店 → 13:45 Pierre Hermé → 貴婦百貨 → 17:00 奧賽 → 20:00 鐵塔遊船 → 21:50 Carette 熱可可",
     coverImage: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1200&auto=format&fit=crop",
-    brief: "今日是巴黎最富文藝與浪漫氣息的一天！上午走訪西堤島兩大地標：瞻仰聖母院外觀，並在 10:00 晨光最美時刻走進聖禮拜堂，仰望 15 米高震撼彩繪玻璃窗。下午漫步拉丁區與貴婦百貨；傍晚 17:00 預約進奧賽美術館欣賞梵谷與莫內，隨後搭 RER C 直達艾菲爾鐵塔腳下搭乘 20:00 Bateaux Parisiens 遊船賞整點閃燈，下船後走上夏樂宮平台拍攝最經典的巴黎鐵塔金色夜景！",
+    brief: "今日是巴黎最富文藝與極致味蕾的一天！上午自巴黎第 1 名可頌店 La Maison d'Isabelle 啟程，走訪聖母院與 10:00 晨光最璀璨的聖禮拜堂彩繪玻璃珠寶盒；中午在百年美好年代宮殿食堂 Bouillon Chartier 品嚐平價烤田螺與油封鴨腿；下午朝聖甜點界畢卡索 Pierre Hermé 巴黎總店的 Ispahan 與馬卡龍；傍晚 17:00 預約進奧賽美術館欣賞梵谷與莫內，隨後搭 RER C 直達艾菲爾鐵塔腳下搭乘 20:00 Bateaux Parisiens 遊船賞整點閃燈，下船後在夏樂宮 Carette 露天座品嚐特濃熱巧克力與鮮奶油晚宴，遙望璀璨鐵塔！",
     reminders: [
-      "⭐ 聖禮拜堂 (Sainte-Chapelle) 白天光線穿透彩繪玻璃最美，務必提前預約上午 10:00 左右時段！",
+      "⭐ 美食打卡亮點：晨間 La Maison d'Isabelle（巴黎第一名AOP奶油可頌）、午餐 Bouillon Chartier（百年平價食堂烤田螺/油封鴨）、午茶 Pierre Hermé（大馬士革玫瑰荔枝 Ispahan 與馬卡龍）、宵夜 Carette Trocadéro（夏樂宮正面鐵塔濃醇熱可可配鮮奶油）！",
+      "⭐ 聖禮拜堂 (Sainte-Chapelle) 白天光線穿透彩繪玻璃最美，預約上午 10:00 左右時段！",
       "⭐ 奧賽美術館已預約 11/5 17:00（週四延長開放至 21:45），請於 16:45 抵達專屬預約通道。",
-      "⭐ 塞納河遊船採用 Bateaux Parisiens 純觀光 1 小時方案（免預約時段持憑證掃碼進站），登船地點在艾菲爾鐵塔腳下 Port de la Bourdonnais 3 號碼頭（請勿跑去蒼蠅船 Bateaux-Mouches）！",
-      "⭐ 巴黎鐵塔夜拍巡禮：下船後沿耶拿橋漫步，先拍旋轉木馬暖光配鐵塔，再走上夏樂宮 (Trocadéro) 居高臨下拍正面全景，還能看到 22:00 的 5 分鐘鑽石閃爍秀！"
+      "⭐ 塞納河遊船採用 Bateaux Parisiens 純觀光 1 小時方案，登船地點在艾菲爾鐵塔腳下 Port de la Bourdonnais 3 號碼頭，20:00 啟航仰望鐵塔閃燈最夢幻！"
     ],
     mapUrl: "https://maps.google.com/?q=Eiffel+Tower+Paris",
     timeline: [
-      { time: "09:00", title: "巴黎聖母院 (Notre-Dame)", desc: "西堤島核心，瞻仰哥德式飛扶壁與雙塔建築風采，感受歷史沉澱", type: "spot", targetId: "notre-dame" },
-      { time: "10:00", title: "聖禮拜堂 (Sainte-Chapelle) ⭐️", desc: "預約 10:00 入場！陽光穿透 15 扇高達 15 米的 13 世紀瑰麗彩繪玻璃窗，宛如置身巨型珠寶盒", type: "spot", targetId: "sainte-chapelle" },
-      { time: "11:00 - 13:30", title: "漫步左岸：莎士比亞書店 ＆ 聖日耳曼德佩", desc: "穿過西堤島抵達左岸，探訪莎士比亞書店、漫步老街，在街角咖啡館享用悠閒午餐", type: "food", targetId: "left-bank-lunch" },
-      { time: "13:30 - 16:15", title: "左岸自由漫步 / Le Bon Marché 百貨", desc: "走訪世界最古老精品百貨貴婦百貨 Le Bon Marché，或在聖日耳曼街區逛獨立選品店", type: "spot", targetId: "bon-marche" },
+      { time: "08:30 - 09:15", title: "晨光早餐：La Maison d'Isabelle 冠軍可頌 🥐", desc: "【必吃神店】大巴黎第一名金牌奶油可頌！AOP發酵奶油外酥內嫩蜂巢組織，奶香濃郁配熱拿鐵", type: "food", targetId: "maison-isabelle" },
+      { time: "09:15 - 10:00", title: "巴黎聖母院 (Notre-Dame)", desc: "西堤島核心，瞻仰哥德式飛扶壁與雙塔建築風采，感受歷史沉澱", type: "spot", targetId: "notre-dame" },
+      { time: "10:00 - 11:00", title: "聖禮拜堂 (Sainte-Chapelle) ⭐️", desc: "預約 10:00 入場！陽光穿透 15 扇高達 15 米的 13 世紀瑰麗彩繪玻璃窗，宛如置身巨型珠寶盒", type: "spot", targetId: "sainte-chapelle" },
+      { time: "11:30 - 13:00", title: "午餐：Bouillon Chartier 百年美好年代平價法餐 🍽️", desc: "【百年名店】挑高宮殿彩繪玻璃大食堂！侍者紙桌布手寫記帳，經典烤田螺、金黃油封鴨腿極度親民美味", type: "food", targetId: "bouillon-chartier" },
+      { time: "13:00 - 13:45", title: "莎士比亞書店 (Shakespeare & Company)", desc: "探訪海明威筆下傳奇書店，木質古董書架與專屬鋼印印章", type: "spot", targetId: "shakespeare-co" },
+      { time: "13:45 - 14:30", title: "午茶：Pierre Hermé 巴黎總店（馬卡龍 ＆ Ispahan）🧁", desc: "【朋朋激推】甜點界畢卡索！鎮店之寶 Ispahan（玫瑰、荔枝、覆盆子）與百香果巧克力馬卡龍", type: "food", targetId: "pierre-herme" },
+      { time: "14:30 - 16:15", title: "左岸自由漫步 / Le Bon Marché 貴婦百貨", desc: "探訪世界第一家現代百貨公司，欣賞十字扶梯與頂級超市伴手禮", type: "spot", targetId: "bon-marche" },
       { time: "16:15 - 16:45", title: "沿塞納河畔漫步 ➔ 前往奧賽美術館", desc: "穿過聖日耳曼林蔭街區，沿著左岸塞納河畔悠閒走向奧賽美術館，準備於 16:45 抵達專屬通道", icon: "walk" },
       { time: "17:00 - 19:15", title: "奧賽美術館 (Musée d'Orsay) 週四夜場 ⭐️", desc: "已預約 17:00 入場（週四延長至 21:45）！欣賞莫內《睡蓮》、梵谷自畫像、雷諾瓦與大鐘剪影拍照", type: "spot", targetId: "orsay-night" },
       { time: "19:15 - 19:45", title: "奧賽搭 RER C 直奔艾菲爾鐵塔 3 號碼頭", desc: "奧賽站搭 RER C 直達 Champ de Mars - Tour Eiffel（8 分鐘），步行 6 分鐘直達 Port de la Bourdonnais", icon: "train" },
       { time: "20:00 - 21:00", title: "Bateaux Parisiens 塞納河純觀光遊船 ⭐️", desc: "持憑證於艾菲爾鐵塔腳下 3 號碼頭登船！20:00 準時啟航，仰望鐵塔整點 5 分鐘金光閃爍，1 小時遊河飽覽塞納河夜景", type: "spot", targetId: "seine-night-cruise" },
       { time: "21:00 - 21:50", title: "艾菲爾鐵塔 ＆ 夏樂宮觀景台夜拍 ⭐️", desc: "下船漫步耶拿橋拍復古旋轉木馬，登上夏樂宮 (Trocadéro) 拍正面無死角明信片全身照，看 22:00 閃燈", type: "spot", targetId: "eiffel-tower" },
-      { time: "22:00", title: "鐵塔景觀 / 左岸小酒館慶祝晚宴", desc: "品嚐法式洋蔥湯、香煎鴨胸或法式生牛肉塔塔，慶祝文藝充實的一天", type: "food", targetId: "left-bank-dinner" }
+      { time: "21:50 - 23:00", title: "宵夜晚宴：Carette Trocadéro 招牌熱巧克力 ＆ 晚宴 ☕️", desc: "【必吃神店】夏樂宮正對面！全巴黎最濃郁順滑熱熱可可配整碗香厚鮮奶油，佐法式洋蔥湯慶祝文藝鐵塔夜", type: "food", targetId: "carette-trocadero" }
     ]
   },
   {
@@ -254,22 +259,23 @@ window.dailyItineraries = [
     date: "2026.11.06",
     weekday: "週五",
     city: "巴黎 ➔ 倫敦 London",
-    badge: "🛍️ 蒙馬特晨光 ＆ 悠閒退稅返倫敦",
+    badge: "🥐 蒙馬特晨景・Le Consulat・Pain Pain・14:30 返倫敦",
     country: "FR",
-    title: "蒙馬特聖心堂晨景 ➔ 浪漫愛牆 ➔ 巴黎北站海關查驗 ➔ 14:30 Eurostar 回倫敦",
-    route: "蒙馬特聖心堂 (09:00) → 小丘廣場與愛牆 → 12:45 巴黎北站海關查驗 → 14:30 Eurostar 回倫敦 (15:57 抵達)",
+    title: "蒙馬特聖心堂晨景 ➔ Le Consulat 早午餐 ➔ Pain Pain 冠軍法棍外帶 ➔ 14:30 Eurostar 回倫敦",
+    route: "蒙馬特聖心堂 (09:00) → 愛牆與小丘廣場 → 10:15 Le Consulat 早午餐 → 11:30 Pain Pain 外帶點心 → 12:45 巴黎北站海關查驗 → 14:30 Eurostar (15:57抵達)",
     coverImage: "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?q=80&w=1200&auto=format&fit=crop",
-    brief: "巴黎最後半天！精品、美妝與快時尚已在 Day 5 買齊並辦妥退稅，今早極度從容悠閒。清晨搭地鐵登上蒙馬特高地，在聖心堂居高臨下俯瞰整座巴黎市景，漫步小丘廣場畫家村與愛牆；中午 12:45 抵達巴黎北站通過英法雙重海關，搭乘 14:30 歐洲之星滿載回憶返回倫敦！",
+    brief: "巴黎最後半天！精品、美妝與快時尚已在 Day 5 買齊並辦妥退稅，今早極度從容悠閒。清晨登上蒙馬特高地在聖心堂俯瞰巴黎全景，漫步愛牆與小丘廣場；在百年傳奇咖啡館 Le Consulat 或 The Hardware Société 悠閒享用法式早午餐；離開蒙馬特前到冠軍麵包店 Pain Pain 採買熱騰騰的冠軍法棍與酥皮點心帶上高鐵；中午 12:45 準時抵達巴黎北站通過英法雙海關，搭乘 14:30 歐洲之星滿載回憶與美味返回倫敦！",
     reminders: [
       "⚠️ 關鍵時間點：14:30 Eurostar 前往倫敦，必須在巴黎北站完成英國移民海關查驗，閘門最遲 13:45 關閉，務必 12:45 前抵達北站！",
-      "大採購已在 Day 5 圓滿完成，今天不用拖著行李手忙腳亂趕退稅，可專注享受蒙馬特老巴黎氛圍！",
-      "蒙馬特高地注意階梯綁紅繩的小販，雙手插口袋或快步通過即可。"
+      "大採購已在 Day 5 圓滿完成，今天不用拖著行李手忙腳亂趕退稅，專注享受蒙馬特老巴黎氛圍與經典美食！",
+      "早午餐與外帶：推薦 Le Consulat 藝術露天早午餐，離開前別忘記到 Pain Pain 帶一條巴黎冠軍法棍在 Eurostar 上享用！"
     ],
     mapUrl: "https://maps.google.com/?q=Paris+Gare+du+Nord",
     timeline: [
-      { time: "08:30", title: "退房 ＆ 寄存行李於飯店/車站", desc: "享用晨間可頌咖啡，辦理退房手續", icon: "sun" },
-      { time: "09:00 - 11:00", title: "蒙馬特高地聖心堂 (Sacré-Cœur) 晨景 ＆ 愛牆漫活 ⭐️", desc: "純白羅馬拜占庭圓頂教堂，登上高台俯瞰巴黎全景，打卡小丘廣場與愛牆", type: "spot", targetId: "sacre-coeur" },
-      { time: "11:15 - 12:15", title: "蒙馬特老街早午餐 / 咖啡時光 ☕️", desc: "在鵝卵石老街挑一間露天咖啡館享用法式早午餐與熱拿鐵", type: "food", targetId: "montmartre-brunch" },
+      { time: "08:30", title: "退房 ＆ 寄存行李於飯店/車站", desc: "享用晨間可頌咖啡，辦理退房手續，行李寄存櫃檯", icon: "sun" },
+      { time: "09:00 - 10:15", title: "蒙馬特高地聖心堂 (Sacré-Cœur) 晨景 ＆ 愛牆漫活 ⭐️", desc: "純白羅馬拜占庭圓頂教堂，登上高台俯瞰巴黎全景，打卡小丘廣場與愛牆", type: "spot", targetId: "sacre-coeur" },
+      { time: "10:15 - 11:30", title: "Le Consulat / The Hardware Société 悠閒早午餐 ☕️", desc: "【必吃名店】百年紅白藝術小餐館或人氣法式烤蛋早午餐，在石板坡道間品味慢巴黎", type: "food", targetId: "montmartre-brunch" },
+      { time: "11:30 - 12:15", title: "Pain Pain 烘焙坊：採買 Eurostar 車上點心 🥖", desc: "【巴黎冠軍法棍】殉道者街藍色明星麵包店！外帶熱騰騰傳統法棍與開心果巧克力蝸牛捲上高鐵", type: "food", targetId: "pain-pain" },
       { time: "12:15 - 12:45", title: "取行李前往巴黎北站 (Gare du Nord)", desc: "搭計程車或地鐵 4 號線前往巴黎北站", icon: "car" },
       { time: "12:45 - 14:00", title: "巴黎北站海關查驗 ＆ 登車候車 ⚠️", desc: "進入 Eurostar 專屬二樓大廳，依序通過法國出境海關、英國入境海關 (UK Border Control) 與行李安檢", icon: "train" },
       { time: "14:30 - 15:57", title: "Eurostar 高速返航倫敦 🇬🇧", desc: "搭乘 Eurostar 穿越英法海底隧道，於倫敦時間 15:57 準時抵達倫敦聖潘克拉斯車站 (St Pancras International)", icon: "train" }
